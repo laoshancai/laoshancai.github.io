@@ -56,5 +56,27 @@
 </description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://laoshancai.github.io/authors/duyang/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/authors/duyang/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Our research&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Focusing on data-driven cancer research, combining high-throughput genomic, transcriptomic and proteomic profiling approaches, to comprehensively investigate molecular landscapes of GI cancer and identify prognosis/predictive biomarkers and novel therapeutic targets&lt;/li&gt;
+&lt;li&gt;Functional study of identified candidate genes using patient derived tumor organoids, a new generation of &lt;em&gt;ex vivo&lt;/em&gt; models.&lt;/li&gt;
+&lt;li&gt;Pan-cancer study and in-depth data mining.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Tools &amp;amp; Databases we developed&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://omics.bjcancer.org/pina&#34; target=&#34;_blank&#34;&gt;PINA&lt;/a&gt;: An integrated platform for protein interaction network construction, filtering, analysis, visualization and management&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://omics.bjcancer.org/cvcdap&#34; target=&#34;_blank&#34;&gt;CVCDAP&lt;/a&gt;: DIY Your Cancer Cohort &amp;amp; Omics-X Analysis&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
