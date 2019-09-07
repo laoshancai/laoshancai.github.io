@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Academic</title>
+    <link>https://laoshancai.github.io/authors/caimeng/</link>
+      <atom:link href="https://laoshancai.github.io/authors/caimeng/index.xml" rel="self" type="application/rss+xml" />
+    <description>Academic</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 06 Sep 2019 11:45:04 +0800</lastBuildDate>
+    <image>
+      <url>https://laoshancai.github.io/img/icon-192.png</url>
+      <title>Academic</title>
+      <link>https://laoshancai.github.io/authors/caimeng/</link>
+    </image>
+    
+    <item>
+      <title>hugo &#43; github &#43; academic 搭建博客(实验室主页)</title>
+      <link>https://laoshancai.github.io/post/hugo_tutorial/</link>
+      <pubDate>Fri, 06 Sep 2019 11:45:04 +0800</pubDate>
+      <guid>https://laoshancai.github.io/post/hugo_tutorial/</guid>
+      <description>
+
+&lt;h3 id=&#34;下载hugo-并配置&#34;&gt;下载hugo，并配置&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;下载hugo，解压。（version = 0.58.1）&lt;/li&gt;
+&lt;li&gt;将解压后的文件夹路径添加到环境变量(方便命令行调用)。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;academic模板配置&#34;&gt;Academic模板配置&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/sourcethemes/academic-kickstart#fork-destination-box&#34; target=&#34;_blank&#34;&gt;Fork&lt;/a&gt; the &lt;em&gt;Academic Kickstart&lt;/em&gt; repository to create a new website(将academic模板fork到自己的github里)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;将远程仓库拉下来，在本地新建一个文件夹建立academic模板本地仓库。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git clone https://github.com/yourusername/academic-kickstart-1.git My_Website
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Initialize the theme(初始化主题)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd My_Website
+git submodule update --init --recursive
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;hugo编译静态页面&#34;&gt;hugo编译静态页面&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# 下面是hugo的一些命令行常用操作
+
+# 生成站点
+hugo new site 文件名称 (如blog)
+
+# 生成文章
+# 执行后，会自动在content/post下生成 test.md文件，打开可编辑内容，ps.文件头部的draft要改为false，这样部署后才能看到文章。
+hugo new post/test.md
+
+# (站点根目录下执行)执行后，站点根目录下会生成一个 public 文件夹，该文件下的内容即Hugo生成的整个静态网站。每次更新内容后，将 public 目录里所有文件 push到GitHub即可。
+hugo
+
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;将静态页面部署到github-pages&#34;&gt;将静态页面部署到Github Pages&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# 在github上新建repository(Creat a new repository),仓库名为username.github.io
+# 将用作网页部署的仓库git clone 到本地，建立本地仓库，每次更新的文件都拖到这里push上去。
+$ git clone https://github.com/laoshancai/laoshancai.github.io.git my_site
+
+#origin一般是默认命名，可以自己定义名字
+$ git remote add origin https://github.com/yourname/yourname.github.io.git (换成自己的)　　将本地目录链接到远程服务器的代码仓库
+
+# 查看远程仓库情况
+$ git remote -v 
+
+
+#建好仓库后，每次使用hugo更新完文件之后执行的操作。
+$ git add -A
+
+$ git commit -m &amp;quot;first commit&amp;quot;
+
+$ git push -u origin master
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Test</title>
+      <link>https://laoshancai.github.io/post/test/</link>
+      <pubDate>Thu, 05 Sep 2019 14:54:22 +0800</pubDate>
+      <guid>https://laoshancai.github.io/post/test/</guid>
+      <description>
+
+&lt;h2 id=&#34;test&#34;&gt;test&lt;/h2&gt;
+
+&lt;p&gt;this is a test blog.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
