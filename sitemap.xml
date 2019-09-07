@@ -5,7 +5,6 @@
   <url>
     <loc>https://laoshancai.github.io/</loc>
     <lastmod>2019-09-06T11:45:04+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -28,18 +27,19 @@
   </url>
   
   <url>
+    <loc>https://laoshancai.github.io/authors/caiyu/</loc>
+  </url>
+  
+  <url>
     <loc>https://laoshancai.github.io/authors/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://laoshancai.github.io/categories/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://laoshancai.github.io/publication_types/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -52,7 +52,6 @@
   
   <url>
     <loc>https://laoshancai.github.io/tags/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>
