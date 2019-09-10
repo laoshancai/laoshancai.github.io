@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects | Wu Lab</title>
+    <link>https://laoshancai.github.io/project/</link>
+      <atom:link href="https://laoshancai.github.io/project/index.xml" rel="self" type="application/rss+xml" />
+    <description>Projects</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2015-2019 Wu Lab ©</copyright><lastBuildDate>Tue, 10 Sep 2019 15:47:16 +0800</lastBuildDate>
+    <image>
+      <url>https://laoshancai.github.io/img/icon-192.png</url>
+      <title>Projects</title>
+      <link>https://laoshancai.github.io/project/</link>
+    </image>
+    
+    <item>
+      <title>CVCDAP</title>
+      <link>https://laoshancai.github.io/project/cvcdap/</link>
+      <pubDate>Tue, 10 Sep 2019 15:47:16 +0800</pubDate>
+      <guid>https://laoshancai.github.io/project/cvcdap/</guid>
+      <description>&lt;p&gt;CVCDAP stands for Cancer Virtual Cohort Discovery Analysis Platform. It is an open-access data portal of a large variety of cancer multi-omics data including public data and in-house data. The CVCDAP provides convenient data analysis and visualization tools for user-defined cohorts, to allow quick data mining to reproduce published results and identify new hypothesis.&lt;/p&gt;
+
+&lt;p&gt;For detailed documentation and first-hand experience, please visit our website at &lt;a href=&#34;http://omics.bjcancer.org/cvcdap/home.do&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

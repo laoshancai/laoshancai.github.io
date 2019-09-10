@@ -5,12 +5,20 @@
     <link>https://laoshancai.github.io/</link>
       <atom:link href="https://laoshancai.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Wu Lab</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2015-2019 Wu Lab©</copyright><lastBuildDate>Tue, 10 Sep 2019 13:21:39 +0800</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2015-2019 Wu Lab ©</copyright><lastBuildDate>Tue, 10 Sep 2019 15:47:16 +0800</lastBuildDate>
     <image>
       <url>https://laoshancai.github.io/img/icon-192.png</url>
       <title>Wu Lab</title>
       <link>https://laoshancai.github.io/</link>
     </image>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://laoshancai.github.io/project/</link>
+      <pubDate>Tue, 10 Sep 2019 15:47:16 +0800</pubDate>
+      <guid>https://laoshancai.github.io/project/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Posts</title>
@@ -21,18 +29,18 @@
     </item>
     
     <item>
-      <title></title>
-      <link></link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid></guid>
+      <title>Publications</title>
+      <link>https://laoshancai.github.io/publication/</link>
+      <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Publications</title>
-      <link>https://laoshancai.github.io/publication/</link>
+      <title></title>
+      <link></link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://laoshancai.github.io/publication/</guid>
+      <guid></guid>
       <description></description>
     </item>
     
