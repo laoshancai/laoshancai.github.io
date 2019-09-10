@@ -5,7 +5,7 @@
     <link>https://laoshancai.github.io/publication/</link>
       <atom:link href="https://laoshancai.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
     <description>Publications</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2015-2019 Wu Lab ©</copyright><lastBuildDate>Mon, 01 Feb 2016 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2015-2019 Wu Lab ©</copyright><lastBuildDate>Mon, 01 Aug 2016 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://laoshancai.github.io/img/icon-192.png</url>
       <title>Publications</title>
@@ -13,10 +13,82 @@
     </image>
     
     <item>
+      <title>Resolution of Novel Pancreatic Ductal Adenocarcinoma Subtypes by Global Phosphotyrosine Profiling</title>
+      <link>https://laoshancai.github.io/publication/humphrey-resolution-2016/</link>
+      <pubDate>Mon, 01 Aug 2016 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/humphrey-resolution-2016/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Genomic analysis of HPV-positive versus HPV-negative oesophageal adenocarcinoma identifies a differential mutational landscape</title>
+      <link>https://laoshancai.github.io/publication/rajendra-genomic-2016/</link>
+      <pubDate>Fri, 01 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/rajendra-genomic-2016/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>The kinome &#39;at large&#39; in cancer</title>
       <link>https://laoshancai.github.io/publication/fleuren-kinome-2016/</link>
       <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
       <guid>https://laoshancai.github.io/publication/fleuren-kinome-2016/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Whole genomes redefine the mutational landscape of pancreatic cancer</title>
+      <link>https://laoshancai.github.io/publication/australian-pancreatic-cancer-genome-initiative-whole-2015/</link>
+      <pubDate>Sun, 01 Feb 2015 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/australian-pancreatic-cancer-genome-initiative-whole-2015/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Targeting mTOR dependency in pancreatic cancer</title>
+      <link>https://laoshancai.github.io/publication/morran-targeting-2014/</link>
+      <pubDate>Mon, 01 Sep 2014 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/morran-targeting-2014/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mutant p53 Drives Pancreatic Cancer Metastasis through Cell-Autonomous PDGF Receptor β Signaling</title>
+      <link>https://laoshancai.github.io/publication/weissmueller-mutant-2014/</link>
+      <pubDate>Tue, 01 Apr 2014 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/weissmueller-mutant-2014/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pancreatic cancer genomes reveal aberrations in axon guidance pathway genes</title>
+      <link>https://laoshancai.github.io/publication/australian-pancreatic-cancer-genome-initiative-pancreatic-2012/</link>
+      <pubDate>Thu, 01 Nov 2012 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/australian-pancreatic-cancer-genome-initiative-pancreatic-2012/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PINA v2.0: mining interactome modules</title>
+      <link>https://laoshancai.github.io/publication/cowley-pina-2012/</link>
+      <pubDate>Sun, 01 Jan 2012 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/cowley-pina-2012/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Integrated network analysis platform for protein-protein interactions</title>
+      <link>https://laoshancai.github.io/publication/wu-integrated-2009/</link>
+      <pubDate>Thu, 01 Jan 2009 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/wu-integrated-2009/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KOBAS server: a web-based platform for automated annotation and pathway identification</title>
+      <link>https://laoshancai.github.io/publication/wu-kobas-2006/</link>
+      <pubDate>Sat, 01 Jul 2006 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/wu-kobas-2006/</guid>
       <description></description>
     </item>
     

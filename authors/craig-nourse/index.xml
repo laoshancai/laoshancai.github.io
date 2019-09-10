@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Craig Nourse | Wu Lab</title>
+    <link>https://laoshancai.github.io/authors/craig-nourse/</link>
+      <atom:link href="https://laoshancai.github.io/authors/craig-nourse/index.xml" rel="self" type="application/rss+xml" />
+    <description>Craig Nourse</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2015-2019 Wu Lab ©</copyright><lastBuildDate>Sun, 01 Feb 2015 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://laoshancai.github.io/img/icon-192.png</url>
+      <title>Craig Nourse</title>
+      <link>https://laoshancai.github.io/authors/craig-nourse/</link>
+    </image>
+    
+    <item>
+      <title>Whole genomes redefine the mutational landscape of pancreatic cancer</title>
+      <link>https://laoshancai.github.io/publication/australian-pancreatic-cancer-genome-initiative-whole-2015/</link>
+      <pubDate>Sun, 01 Feb 2015 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/australian-pancreatic-cancer-genome-initiative-whole-2015/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pancreatic cancer genomes reveal aberrations in axon guidance pathway genes</title>
+      <link>https://laoshancai.github.io/publication/australian-pancreatic-cancer-genome-initiative-pancreatic-2012/</link>
+      <pubDate>Thu, 01 Nov 2012 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/australian-pancreatic-cancer-genome-initiative-pancreatic-2012/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

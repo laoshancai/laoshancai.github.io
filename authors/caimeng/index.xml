@@ -99,11 +99,7 @@ $ git push -u origin master
       <link>https://laoshancai.github.io/post/test/</link>
       <pubDate>Thu, 05 Sep 2019 14:54:22 +0800</pubDate>
       <guid>https://laoshancai.github.io/post/test/</guid>
-      <description>
-
-&lt;h2 id=&#34;test&#34;&gt;test&lt;/h2&gt;
-
-&lt;p&gt;this is a test blog.&lt;/p&gt;
+      <description>&lt;p&gt;this is a test blog.&lt;/p&gt;
 </description>
     </item>
     

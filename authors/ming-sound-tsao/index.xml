@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ming-Sound Tsao | Wu Lab</title>
+    <link>https://laoshancai.github.io/authors/ming-sound-tsao/</link>
+      <atom:link href="https://laoshancai.github.io/authors/ming-sound-tsao/index.xml" rel="self" type="application/rss+xml" />
+    <description>Ming-Sound Tsao</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2015-2019 Wu Lab ©</copyright><lastBuildDate>Thu, 01 Nov 2012 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://laoshancai.github.io/img/icon-192.png</url>
+      <title>Ming-Sound Tsao</title>
+      <link>https://laoshancai.github.io/authors/ming-sound-tsao/</link>
+    </image>
+    
+    <item>
+      <title>Pancreatic cancer genomes reveal aberrations in axon guidance pathway genes</title>
+      <link>https://laoshancai.github.io/publication/australian-pancreatic-cancer-genome-initiative-pancreatic-2012/</link>
+      <pubDate>Thu, 01 Nov 2012 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/australian-pancreatic-cancer-genome-initiative-pancreatic-2012/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

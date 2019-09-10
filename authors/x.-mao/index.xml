@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>X. Mao | Wu Lab</title>
+    <link>https://laoshancai.github.io/authors/x.-mao/</link>
+      <atom:link href="https://laoshancai.github.io/authors/x.-mao/index.xml" rel="self" type="application/rss+xml" />
+    <description>X. Mao</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2015-2019 Wu Lab ©</copyright><lastBuildDate>Sat, 01 Jul 2006 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://laoshancai.github.io/img/icon-192.png</url>
+      <title>X. Mao</title>
+      <link>https://laoshancai.github.io/authors/x.-mao/</link>
+    </image>
+    
+    <item>
+      <title>KOBAS server: a web-based platform for automated annotation and pathway identification</title>
+      <link>https://laoshancai.github.io/publication/wu-kobas-2006/</link>
+      <pubDate>Sat, 01 Jul 2006 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/wu-kobas-2006/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

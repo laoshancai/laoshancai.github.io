@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Robert G. Parton | Wu Lab</title>
+    <link>https://laoshancai.github.io/authors/robert-g.-parton/</link>
+      <atom:link href="https://laoshancai.github.io/authors/robert-g.-parton/index.xml" rel="self" type="application/rss+xml" />
+    <description>Robert G. Parton</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2015-2019 Wu Lab ©</copyright><lastBuildDate>Mon, 01 Aug 2016 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://laoshancai.github.io/img/icon-192.png</url>
+      <title>Robert G. Parton</title>
+      <link>https://laoshancai.github.io/authors/robert-g.-parton/</link>
+    </image>
+    
+    <item>
+      <title>Resolution of Novel Pancreatic Ductal Adenocarcinoma Subtypes by Global Phosphotyrosine Profiling</title>
+      <link>https://laoshancai.github.io/publication/humphrey-resolution-2016/</link>
+      <pubDate>Mon, 01 Aug 2016 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/humphrey-resolution-2016/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
