@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Academic</title>
+    <title>Wu Lab</title>
     <link>https://laoshancai.github.io/</link>
       <atom:link href="https://laoshancai.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <description>Academic</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 06 Sep 2019 11:45:04 +0800</lastBuildDate>
+    <description>Wu Lab</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2015-2019 Wu Lab©</copyright><lastBuildDate>Tue, 10 Sep 2019 13:21:39 +0800</lastBuildDate>
     <image>
       <url>https://laoshancai.github.io/img/icon-192.png</url>
-      <title>Academic</title>
+      <title>Wu Lab</title>
       <link>https://laoshancai.github.io/</link>
     </image>
     
     <item>
       <title>Posts</title>
       <link>https://laoshancai.github.io/post/</link>
-      <pubDate>Fri, 06 Sep 2019 11:45:04 +0800</pubDate>
+      <pubDate>Tue, 10 Sep 2019 13:21:39 +0800</pubDate>
       <guid>https://laoshancai.github.io/post/</guid>
       <description></description>
     </item>

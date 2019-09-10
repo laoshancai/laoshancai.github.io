@@ -3,12 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://laoshancai.github.io/authors/caimeng/</loc>
-    <lastmod>2019-09-06T11:45:04+08:00</lastmod>
+    <loc>https://laoshancai.github.io/post/teachersday/</loc>
+    <lastmod>2019-09-10T13:21:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://laoshancai.github.io/post/</loc>
+    <lastmod>2019-09-10T13:21:39+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://laoshancai.github.io/</loc>
+    <lastmod>2019-09-10T13:21:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://laoshancai.github.io/authors/caimeng/</loc>
     <lastmod>2019-09-06T11:45:04+08:00</lastmod>
   </url>
   
@@ -19,11 +29,6 @@
   
   <url>
     <loc>https://laoshancai.github.io/post/hugo_tutorial/</loc>
-    <lastmod>2019-09-06T11:45:04+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://laoshancai.github.io/post/</loc>
     <lastmod>2019-09-06T11:45:04+08:00</lastmod>
   </url>
   
