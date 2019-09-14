@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>D. Miller | Wu Lab</title>
+    <link>https://laoshancai.github.io/authors/d.-miller/</link>
+      <atom:link href="https://laoshancai.github.io/authors/d.-miller/index.xml" rel="self" type="application/rss+xml" />
+    <description>D. Miller</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2015-2019 Wu Lab ©</copyright><lastBuildDate>Thu, 01 Jan 2015 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://laoshancai.github.io/img/icon-192.png</url>
+      <title>D. Miller</title>
+      <link>https://laoshancai.github.io/authors/d.-miller/</link>
+    </image>
+    
+    <item>
+      <title>Whole genomes redefine the mutational landscape of pancreatic cancer</title>
+      <link>https://laoshancai.github.io/publication/rn-41/</link>
+      <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/rn-41/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Genome-wide DNA methylation patterns in pancreatic ductal adenocarcinoma reveal epigenetic deregulation of SLIT-ROBO, ITGA2 and MET signaling</title>
+      <link>https://laoshancai.github.io/publication/rn-46/</link>
+      <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/rn-46/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>qpure: A Tool to Estimate Tumor Cellularity from Genome-Wide Single-Nucleotide Polymorphism Profiles</title>
+      <link>https://laoshancai.github.io/publication/rn-60/</link>
+      <pubDate>Sun, 01 Jan 2012 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/rn-60/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

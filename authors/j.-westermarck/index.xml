@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>J. Westermarck | Wu Lab</title>
+    <link>https://laoshancai.github.io/authors/j.-westermarck/</link>
+      <atom:link href="https://laoshancai.github.io/authors/j.-westermarck/index.xml" rel="self" type="application/rss+xml" />
+    <description>J. Westermarck</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2015-2019 Wu Lab ©</copyright><lastBuildDate>Fri, 01 Jan 2010 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://laoshancai.github.io/img/icon-192.png</url>
+      <title>J. Westermarck</title>
+      <link>https://laoshancai.github.io/authors/j.-westermarck/</link>
+    </image>
+    
+    <item>
+      <title>Large-scale data integration framework provides a comprehensive view on glioblastoma multiforme</title>
+      <link>https://laoshancai.github.io/publication/rn-64/</link>
+      <pubDate>Fri, 01 Jan 2010 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/rn-64/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Integrated network analysis platform for protein-protein interactions</title>
+      <link>https://laoshancai.github.io/publication/rn-65/</link>
+      <pubDate>Thu, 01 Jan 2009 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/rn-65/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

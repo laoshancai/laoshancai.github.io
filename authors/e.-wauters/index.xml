@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>E. Wauters | Wu Lab</title>
+    <link>https://laoshancai.github.io/authors/e.-wauters/</link>
+      <atom:link href="https://laoshancai.github.io/authors/e.-wauters/index.xml" rel="self" type="application/rss+xml" />
+    <description>E. Wauters</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2015-2019 Wu Lab ©</copyright><lastBuildDate>Thu, 01 Jan 2015 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://laoshancai.github.io/img/icon-192.png</url>
+      <title>E. Wauters</title>
+      <link>https://laoshancai.github.io/authors/e.-wauters/</link>
+    </image>
+    
+    <item>
+      <title>Pancreas-Specific Sirt1-Deficiency in Mice Compromises Beta-Cell Function without Development of Hyperglycemia</title>
+      <link>https://laoshancai.github.io/publication/rn-43/</link>
+      <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/rn-43/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sirtuin-1 regulates acinar-to-ductal metaplasia and supports cancer cell viability in pancreatic cancer</title>
+      <link>https://laoshancai.github.io/publication/rn-52/</link>
+      <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/rn-52/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

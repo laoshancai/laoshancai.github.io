@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>P. Kohonen | Wu Lab</title>
+    <link>https://laoshancai.github.io/authors/p.-kohonen/</link>
+      <atom:link href="https://laoshancai.github.io/authors/p.-kohonen/index.xml" rel="self" type="application/rss+xml" />
+    <description>P. Kohonen</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2015-2019 Wu Lab ©</copyright><lastBuildDate>Fri, 01 Jan 2010 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://laoshancai.github.io/img/icon-192.png</url>
+      <title>P. Kohonen</title>
+      <link>https://laoshancai.github.io/authors/p.-kohonen/</link>
+    </image>
+    
+    <item>
+      <title>Large-scale data integration framework provides a comprehensive view on glioblastoma multiforme</title>
+      <link>https://laoshancai.github.io/publication/rn-64/</link>
+      <pubDate>Fri, 01 Jan 2010 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/rn-64/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

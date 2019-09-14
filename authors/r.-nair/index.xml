@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R. Nair | Wu Lab</title>
+    <link>https://laoshancai.github.io/authors/r.-nair/</link>
+      <atom:link href="https://laoshancai.github.io/authors/r.-nair/index.xml" rel="self" type="application/rss+xml" />
+    <description>R. Nair</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2015-2019 Wu Lab ©</copyright><lastBuildDate>Wed, 01 Jan 2014 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://laoshancai.github.io/img/icon-192.png</url>
+      <title>R. Nair</title>
+      <link>https://laoshancai.github.io/authors/r.-nair/</link>
+    </image>
+    
+    <item>
+      <title>Profiling the tyrosine phosphoproteome of different mouse mammary tumour models reveals distinct, model-specific signalling networks and conserved oncogenic pathways</title>
+      <link>https://laoshancai.github.io/publication/rn-50/</link>
+      <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/rn-50/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

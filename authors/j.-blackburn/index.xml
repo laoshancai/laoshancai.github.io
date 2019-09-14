@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>J. Blackburn | Wu Lab</title>
+    <link>https://laoshancai.github.io/authors/j.-blackburn/</link>
+      <atom:link href="https://laoshancai.github.io/authors/j.-blackburn/index.xml" rel="self" type="application/rss+xml" />
+    <description>J. Blackburn</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2015-2019 Wu Lab ©</copyright><lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://laoshancai.github.io/img/icon-192.png</url>
+      <title>J. Blackburn</title>
+      <link>https://laoshancai.github.io/authors/j.-blackburn/</link>
+    </image>
+    
+    <item>
+      <title>Phosphoproteomic Profiling Reveals ALK and MET as Novel Actionable Targets across Synovial Sarcoma Subtypes</title>
+      <link>https://laoshancai.github.io/publication/rn-1575/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/rn-1575/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Damage-inducible intragenic demethylation of the human TP53 tumor suppressor gene is associated with transcription from an alternative intronic promoter</title>
+      <link>https://laoshancai.github.io/publication/rn-958/</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/rn-958/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

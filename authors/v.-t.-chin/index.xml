@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>V. T. Chin | Wu Lab</title>
+    <link>https://laoshancai.github.io/authors/v.-t.-chin/</link>
+      <atom:link href="https://laoshancai.github.io/authors/v.-t.-chin/index.xml" rel="self" type="application/rss+xml" />
+    <description>V. T. Chin</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2015-2019 Wu Lab ©</copyright><lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://laoshancai.github.io/img/icon-192.png</url>
+      <title>V. T. Chin</title>
+      <link>https://laoshancai.github.io/authors/v.-t.-chin/</link>
+    </image>
+    
+    <item>
+      <title>Hypermutation In Pancreatic Cancer</title>
+      <link>https://laoshancai.github.io/publication/rn-1246/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/rn-1246/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Histomolecular phenotypes and outcome in adenocarcinoma of the ampulla of vater</title>
+      <link>https://laoshancai.github.io/publication/rn-56/</link>
+      <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/rn-56/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pancreatic cancer genomes reveal aberrations in axon guidance pathway genes</title>
+      <link>https://laoshancai.github.io/publication/rn-62/</link>
+      <pubDate>Sun, 01 Jan 2012 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/rn-62/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

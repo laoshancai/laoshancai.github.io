@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>J. E. Cain | Wu Lab</title>
+    <link>https://laoshancai.github.io/authors/j.-e.-cain/</link>
+      <atom:link href="https://laoshancai.github.io/authors/j.-e.-cain/index.xml" rel="self" type="application/rss+xml" />
+    <description>J. E. Cain</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2015-2019 Wu Lab ©</copyright><lastBuildDate>Mon, 01 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://laoshancai.github.io/img/icon-192.png</url>
+      <title>J. E. Cain</title>
+      <link>https://laoshancai.github.io/authors/j.-e.-cain/</link>
+    </image>
+    
+    <item>
+      <title>Inhibition of activin signaling in lung adenocarcinoma increases the therapeutic index of platinum chemotherapy</title>
+      <link>https://laoshancai.github.io/publication/rn-1693/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/rn-1693/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Phosphoproteomic Profiling Reveals ALK and MET as Novel Actionable Targets across Synovial Sarcoma Subtypes</title>
+      <link>https://laoshancai.github.io/publication/rn-1575/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/rn-1575/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

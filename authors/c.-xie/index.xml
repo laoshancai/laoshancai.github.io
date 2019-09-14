@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C. Xie | Wu Lab</title>
+    <link>https://laoshancai.github.io/authors/c.-xie/</link>
+      <atom:link href="https://laoshancai.github.io/authors/c.-xie/index.xml" rel="self" type="application/rss+xml" />
+    <description>C. Xie</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2015-2019 Wu Lab ©</copyright><lastBuildDate>Wed, 01 Jan 2014 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://laoshancai.github.io/img/icon-192.png</url>
+      <title>C. Xie</title>
+      <link>https://laoshancai.github.io/authors/c.-xie/</link>
+    </image>
+    
+    <item>
+      <title>Ubiquitin-conjugating enzyme E2C: A potential cancer biomarker</title>
+      <link>https://laoshancai.github.io/publication/rn-71/</link>
+      <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/rn-71/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KOBAS 2.0: a web server for annotation and identification of enriched pathways and diseases</title>
+      <link>https://laoshancai.github.io/publication/rn-63/</link>
+      <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/rn-63/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

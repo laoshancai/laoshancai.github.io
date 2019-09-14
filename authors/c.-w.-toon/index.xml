@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C. W. Toon | Wu Lab</title>
+    <link>https://laoshancai.github.io/authors/c.-w.-toon/</link>
+      <atom:link href="https://laoshancai.github.io/authors/c.-w.-toon/index.xml" rel="self" type="application/rss+xml" />
+    <description>C. W. Toon</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2015-2019 Wu Lab ©</copyright><lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://laoshancai.github.io/img/icon-192.png</url>
+      <title>C. W. Toon</title>
+      <link>https://laoshancai.github.io/authors/c.-w.-toon/</link>
+    </image>
+    
+    <item>
+      <title>Hypermutation In Pancreatic Cancer</title>
+      <link>https://laoshancai.github.io/publication/rn-1246/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/rn-1246/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Genomic analyses identify molecular subtypes of pancreatic cancer</title>
+      <link>https://laoshancai.github.io/publication/rn-985/</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/rn-985/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Clinical and molecular characterization of HER2 amplified-pancreatic cancer</title>
+      <link>https://laoshancai.github.io/publication/rn-55/</link>
+      <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/rn-55/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

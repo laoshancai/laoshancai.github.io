@@ -5,7 +5,7 @@
     <link>https://laoshancai.github.io/authors/l.-wei/</link>
       <atom:link href="https://laoshancai.github.io/authors/l.-wei/index.xml" rel="self" type="application/rss+xml" />
     <description>L. Wei</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2015-2019 Wu Lab ©</copyright><lastBuildDate>Sat, 01 Jul 2006 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2015-2019 Wu Lab ©</copyright><lastBuildDate>Sat, 01 Jan 2011 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://laoshancai.github.io/img/icon-192.png</url>
       <title>L. Wei</title>
@@ -13,10 +13,18 @@
     </image>
     
     <item>
+      <title>KOBAS 2.0: a web server for annotation and identification of enriched pathways and diseases</title>
+      <link>https://laoshancai.github.io/publication/rn-63/</link>
+      <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/rn-63/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>KOBAS server: a web-based platform for automated annotation and pathway identification</title>
-      <link>https://laoshancai.github.io/publication/wu-kobas-2006/</link>
-      <pubDate>Sat, 01 Jul 2006 00:00:00 +0000</pubDate>
-      <guid>https://laoshancai.github.io/publication/wu-kobas-2006/</guid>
+      <link>https://laoshancai.github.io/publication/rn-68/</link>
+      <pubDate>Sun, 01 Jan 2006 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/rn-68/</guid>
       <description></description>
     </item>
     

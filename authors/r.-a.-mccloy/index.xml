@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R. A. McCloy | Wu Lab</title>
+    <link>https://laoshancai.github.io/authors/r.-a.-mccloy/</link>
+      <atom:link href="https://laoshancai.github.io/authors/r.-a.-mccloy/index.xml" rel="self" type="application/rss+xml" />
+    <description>R. A. McCloy</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2015-2019 Wu Lab ©</copyright><lastBuildDate>Mon, 01 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://laoshancai.github.io/img/icon-192.png</url>
+      <title>R. A. McCloy</title>
+      <link>https://laoshancai.github.io/authors/r.-a.-mccloy/</link>
+    </image>
+    
+    <item>
+      <title>Inhibition of activin signaling in lung adenocarcinoma increases the therapeutic index of platinum chemotherapy</title>
+      <link>https://laoshancai.github.io/publication/rn-1693/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/rn-1693/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Global characterization of signalling networks associated with tamoxifen resistance in breast cancer</title>
+      <link>https://laoshancai.github.io/publication/rn-58/</link>
+      <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
+      <guid>https://laoshancai.github.io/publication/rn-58/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
