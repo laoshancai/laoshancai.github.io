@@ -69,7 +69,7 @@
 
 <meta itemprop="datePublished" content="2019-09-16T14:05:40&#43;08:00" />
 <meta itemprop="dateModified" content="2019-09-16T14:05:40&#43;08:00" />
-<meta itemprop="wordCount" content="614">
+<meta itemprop="wordCount" content="841">
 
 
 
@@ -501,6 +501,24 @@ $ git commit -m &quot;first commit&quot;
 
 $ git push -u origin master
 </code></pre>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#75715e"># 在github上新建repository(Creat a new repository),仓库名为username.github.io</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span style="color:#75715e"># 将用作网页部署的仓库git clone 到本地，建立本地仓库，每次更新的文件都拖到这里push上去。</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span>$ git clone https://github.com/laoshancai/laoshancai.github.io.git my_site
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span style="color:#75715e">#origin一般是默认命名，可以自己定义名字</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>$ git remote add origin https://github.com/yourname/yourname.github.io.git <span style="color:#f92672">(</span>换成自己的<span style="color:#f92672">)</span>　　将本地目录链接到远程服务器的代码仓库
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span style="color:#75715e"># 查看远程仓库情况</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>$ git remote -v 
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span style="color:#75715e">#建好仓库后，每次更新完文件之后执行的操作。</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>$ git add -A
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span>$ git commit -m <span style="color:#e6db74">&#34;first commit&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span>$ git push -u origin master</code></pre></div>
 
     </div>
 
