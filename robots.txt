@@ -1,2 +1,0 @@
-User-agent: *
-Sitemap: https://laoshancai.github.io/sitemap.xml
