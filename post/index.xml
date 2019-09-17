@@ -148,7 +148,7 @@ Andrew-&amp;gt;&amp;gt;China: I am good thanks!
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;x -&amp;gt; 5
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;x -&amp;gt; 5
 y -&amp;gt; 6
 print(x, digits = NULL, quote = TRUE,
       na.print = NULL, print.gap = NULL, right = FALSE,
