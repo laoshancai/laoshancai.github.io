@@ -17,7 +17,63 @@
   
   <url>
     <loc>https://laoshancai.github.io/categories/</loc>
-    <lastmod>2018-11-05T16:01:23+08:00</lastmod>
+    <lastmod>2019-09-17T16:01:23+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laoshancai.github.io/</loc>
+    <lastmod>2019-09-17T16:01:23+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laoshancai.github.io/post/even%E6%B7%BB%E5%8A%A0r%E8%AF%AD%E8%A8%80%E9%AB%98%E4%BA%AE%E5%8F%8Atitle%E6%98%BE%E7%A4%BA/</loc>
+    <lastmod>2019-09-17T16:01:23+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laoshancai.github.io/post/</loc>
+    <lastmod>2019-09-17T16:01:23+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laoshancai.github.io/tags/preview/</loc>
+    <lastmod>2019-09-17T16:01:23+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laoshancai.github.io/categories/syntax-highlighting/</loc>
+    <lastmod>2019-09-17T16:01:23+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laoshancai.github.io/tags/syntax-highlighting/</loc>
+    <lastmod>2019-09-17T16:01:23+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laoshancai.github.io/tags/tag-5/</loc>
+    <lastmod>2019-09-17T16:01:23+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laoshancai.github.io/tags/</loc>
+    <lastmod>2019-09-17T16:01:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -37,27 +93,6 @@
   </url>
   
   <url>
-    <loc>https://laoshancai.github.io/</loc>
-    <lastmod>2018-11-05T16:01:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://laoshancai.github.io/post/</loc>
-    <lastmod>2018-11-05T16:01:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://laoshancai.github.io/tags/preview/</loc>
-    <lastmod>2018-11-05T16:01:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://laoshancai.github.io/tags/tag-3/</loc>
     <lastmod>2018-07-10T00:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -65,21 +100,14 @@
   </url>
   
   <url>
-    <loc>https://laoshancai.github.io/tags/</loc>
-    <lastmod>2018-11-05T16:01:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://laoshancai.github.io/tags/theme-preview/</loc>
+    <loc>https://laoshancai.github.io/categories/theme-preview/</loc>
     <lastmod>2018-07-10T00:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://laoshancai.github.io/categories/theme-preview/</loc>
+    <loc>https://laoshancai.github.io/tags/theme-preview/</loc>
     <lastmod>2018-07-10T00:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -100,14 +128,14 @@
   </url>
   
   <url>
-    <loc>https://laoshancai.github.io/tags/english/</loc>
+    <loc>https://laoshancai.github.io/categories/english/</loc>
     <lastmod>2017-08-31T15:43:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://laoshancai.github.io/categories/english/</loc>
+    <loc>https://laoshancai.github.io/tags/english/</loc>
     <lastmod>2017-08-31T15:43:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -163,14 +191,14 @@
   </url>
   
   <url>
-    <loc>https://laoshancai.github.io/categories/%E4%B8%AD%E6%96%87/</loc>
+    <loc>https://laoshancai.github.io/tags/%E4%B8%AD%E6%96%87/</loc>
     <lastmod>2017-08-30T01:37:56+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://laoshancai.github.io/tags/%E4%B8%AD%E6%96%87/</loc>
+    <loc>https://laoshancai.github.io/categories/%E4%B8%AD%E6%96%87/</loc>
     <lastmod>2017-08-30T01:37:56+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -184,14 +212,14 @@
   </url>
   
   <url>
-    <loc>https://laoshancai.github.io/categories/shortcodes/</loc>
+    <loc>https://laoshancai.github.io/tags/shortcodes/</loc>
     <lastmod>2018-02-01T18:01:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://laoshancai.github.io/tags/shortcodes/</loc>
+    <loc>https://laoshancai.github.io/categories/shortcodes/</loc>
     <lastmod>2018-02-01T18:01:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -212,28 +240,7 @@
   </url>
   
   <url>
-    <loc>https://laoshancai.github.io/tags/syntax-highlighting/</loc>
-    <lastmod>2018-11-05T16:01:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://laoshancai.github.io/categories/syntax-highlighting/</loc>
-    <lastmod>2018-11-05T16:01:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://laoshancai.github.io/post/syntax-highlighting/</loc>
-    <lastmod>2018-11-05T16:01:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://laoshancai.github.io/tags/tag-5/</loc>
     <lastmod>2018-11-05T16:01:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

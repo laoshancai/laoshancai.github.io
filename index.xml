@@ -6,7 +6,7 @@
     <description>Recent content on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 10 Jul 2018 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 17 Sep 2019 16:01:23 +0800</lastBuildDate>
     
 	<atom:link href="https://laoshancai.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -29,6 +29,15 @@
       <description>Hugo is a static site engine written in Go.
 It makes use of a variety of open source projects including:
  Cobra Viper J Walter Weatherman Cast  Learn more and contribute on GitHub.</description>
+    </item>
+    
+    <item>
+      <title>even添加r语言高亮及title显示</title>
+      <link>https://laoshancai.github.io/post/even%E6%B7%BB%E5%8A%A0r%E8%AF%AD%E8%A8%80%E9%AB%98%E4%BA%AE%E5%8F%8Atitle%E6%98%BE%E7%A4%BA/</link>
+      <pubDate>Tue, 17 Sep 2019 16:01:23 +0800</pubDate>
+      
+      <guid>https://laoshancai.github.io/post/even%E6%B7%BB%E5%8A%A0r%E8%AF%AD%E8%A8%80%E9%AB%98%E4%BA%AE%E5%8F%8Atitle%E6%98%BE%E7%A4%BA/</guid>
+      <description>安装scoop，用scoop下载yarn和node.js #1 第一步打开powershell（不是cmd） Set-ExecutionPolicy RemoteSigned -scope CurrentUser #下载并安装scoop iwr -useb get.scoop.sh |</description>
     </item>
     
     <item>
