@@ -16,14 +16,14 @@
   </url>
   
   <url>
-    <loc>https://laoshancai.github.io/categories/</loc>
+    <loc>https://laoshancai.github.io/</loc>
     <lastmod>2019-09-17T16:01:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://laoshancai.github.io/</loc>
+    <loc>https://laoshancai.github.io/categories/</loc>
     <lastmod>2019-09-17T16:01:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -100,14 +100,14 @@
   </url>
   
   <url>
-    <loc>https://laoshancai.github.io/categories/theme-preview/</loc>
+    <loc>https://laoshancai.github.io/tags/theme-preview/</loc>
     <lastmod>2018-07-10T00:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://laoshancai.github.io/tags/theme-preview/</loc>
+    <loc>https://laoshancai.github.io/categories/theme-preview/</loc>
     <lastmod>2018-07-10T00:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
