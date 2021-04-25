@@ -1,0 +1,3124 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>R数据科学 笔记 - Cai&#39;s Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Cai Meng" /><meta name="description" content="R数据科学 (R for Data Science) 0 前言 导入-整理-(转换-模型-可视化）-沟通 准备工作 R\RStudio\tidyverse\一些其他包 第一部分 探索篇 1 使" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.58.1 with theme even" />
+
+
+<link rel="canonical" href="https://laoshancai.github.io/post/r4ds/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.157ce929.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="R数据科学 笔记" />
+<meta property="og:description" content="R数据科学 (R for Data Science) 0 前言 导入-整理-(转换-模型-可视化）-沟通 准备工作 R\RStudio\tidyverse\一些其他包 第一部分 探索篇 1 使" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://laoshancai.github.io/post/r4ds/" />
+<meta property="article:published_time" content="2020-04-25T23:54:11+08:00" />
+<meta property="article:modified_time" content="2020-04-25T23:54:11+08:00" />
+<meta itemprop="name" content="R数据科学 笔记">
+<meta itemprop="description" content="R数据科学 (R for Data Science) 0 前言 导入-整理-(转换-模型-可视化）-沟通 准备工作 R\RStudio\tidyverse\一些其他包 第一部分 探索篇 1 使">
+
+
+<meta itemprop="datePublished" content="2020-04-25T23:54:11&#43;08:00" />
+<meta itemprop="dateModified" content="2020-04-25T23:54:11&#43;08:00" />
+<meta itemprop="wordCount" content="16358">
+
+
+
+<meta itemprop="keywords" content="R," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="R数据科学 笔记"/>
+<meta name="twitter:description" content="R数据科学 (R for Data Science) 0 前言 导入-整理-(转换-模型-可视化）-沟通 准备工作 R\RStudio\tidyverse\一些其他包 第一部分 探索篇 1 使"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Cai&#39;s Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Cai&#39;s Blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">R数据科学 笔记</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-04-25 </span>
+        <div class="post-category">
+            <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"> 读书笔记 </a>
+            </div>
+          <span class="more-meta"> 约 16358 字 </span>
+          <span class="more-meta"> 预计阅读 33 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#r数据科学-r-for-data-science">R数据科学 (R for Data Science)</a>
+<ul>
+<li><a href="#0-前言">0 前言</a>
+<ul>
+<li><a href="#准备工作">准备工作</a></li>
+</ul></li>
+<li><a href="#第一部分-探索篇">第一部分 <strong>探索篇</strong></a></li>
+<li><a href="#1-使用ggplot2-进行数据可视化">1 使用ggplot2 进行数据可视化</a>
+<ul>
+<li><a href="#1-1-mpg数据框">1.1 mpg数据框</a></li>
+<li><a href="#1-2-图形属性映射">1.2 图形属性映射</a>
+<ul>
+<li>
+<ul>
+<li><a href="#手动设置-在aes外-需要设为有意义的值">手动设置（在aes外）需要设为有意义的值。</a></li>
+<li><a href="#颜色-字符串-blue-red等">颜色：字符串，blue，red等</a></li>
+<li><a href="#大小-单位mm">大小：单位mm</a></li>
+<li><a href="#形状-数字编号表示">形状：数字编号表示</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#1-3-分面">1.3 分面</a></li>
+<li><a href="#1-4-几何对象">1.4 几何对象</a></li>
+<li><a href="#1-5-统计变换">1.5 统计变换</a></li>
+<li><a href="#1-6-位置调整">1.6 位置调整</a></li>
+<li><a href="#1-7-坐标系">1.7 坐标系</a></li>
+</ul></li>
+<li><a href="#2-工作流-基础">2 工作流：基础</a></li>
+<li><a href="#3-使用dplyr进行数据转换">3 使用dplyr进行数据转换</a>
+<ul>
+<li><a href="#3-1-dplyr-基础">3.1 dplyr 基础</a></li>
+<li><a href="#3-2-使用filter-筛选行">3.2 使用filter() 筛选行</a></li>
+<li><a href="#3-3-使用arrange-排列行">3.3  使用arrange()排列行</a></li>
+<li><a href="#3-4-使用select-选择列">3.4 使用select() 选择列</a></li>
+<li><a href="#3-5-使用mutate-添加新变量">3.5 使用mutate() 添加新变量</a></li>
+<li><a href="#3-6-使用summarize-进行分组摘要">3.6 使用summarize() 进行分组摘要</a></li>
+</ul></li>
+<li><a href="#4-工作流-脚本">4 工作流：脚本</a></li>
+<li><a href="#5-探索性数据分析">5 探索性数据分析</a></li>
+<li><a href="#6-工作流-项目">6 工作流：项目</a></li>
+<li><a href="#第二部分-数据处理篇">第二部分 <strong>数据处理篇</strong></a></li>
+<li><a href="#7-使用tibble实现简单数据框">7 使用tibble实现简单数据框</a></li>
+<li><a href="#8-使用readr进行数据导入">8 使用readr进行数据导入</a></li>
+<li><a href="#9-使用dplyr处理关系数据">9 使用dplyr处理关系数据</a></li>
+<li><a href="#10-使用stringr处理字符串">10 使用stringr处理字符串</a></li>
+<li><a href="#11-使用forcats处理因子">11 使用forcats处理因子</a></li>
+<li><a href="#12-使用lubridate处理日期和时间">12 使用lubridate处理日期和时间</a></li>
+<li><a href="#第三部分-编程篇">第三部分 <strong>编程篇</strong></a></li>
+<li><a href="#13-使用magrittr进行管道操作">13 使用magrittr进行管道操作</a></li>
+<li><a href="#14-函数">14 函数</a></li>
+<li><a href="#15-向量">15 向量</a></li>
+<li><a href="#16-使用purrr实现迭代">16 使用purrr实现迭代</a></li>
+<li><a href="#第四部分-模型">第四部分 模型</a></li>
+<li><a href="#17-使用modelr实现基础模型">17 使用modelr实现基础模型</a></li>
+<li><a href="#18-模型构建">18 模型构建</a></li>
+<li><a href="#19-使用purrr和broom处理多个模型">19 使用purrr和broom处理多个模型</a></li>
+<li><a href="#第五部分-沟通">第五部分 沟通</a></li>
+<li><a href="#20-r-markdown">20 R Markdown</a></li>
+<li><a href="#21-使用ggplot2-进行图形化沟通">21 使用ggplot2 进行图形化沟通</a></li>
+<li><a href="#22-r-markdown-输出类型">22 R Markdown 输出类型</a></li>
+<li><a href="#23-r-markdown-工作流">23 R Markdown 工作流</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<h1 id="r数据科学-r-for-data-science">R数据科学 (R for Data Science)</h1>
+
+<h2 id="0-前言">0 前言</h2>
+
+<p>导入-整理-(转换-模型-可视化）-沟通</p>
+
+<h3 id="准备工作">准备工作</h3>
+
+<p>R\RStudio\tidyverse\一些其他包</p>
+
+<h2 id="第一部分-探索篇">第一部分 <strong>探索篇</strong></h2>
+
+<h2 id="1-使用ggplot2-进行数据可视化">1 使用ggplot2 进行数据可视化</h2>
+
+<h3 id="1-1-mpg数据框">1.1 mpg数据框</h3>
+
+<p>mpg 数据集概述</p>
+
+<pre><code class="language-R">dim(mpg)
+
+234  11 # 234 rows 11 columns
+</code></pre>
+
+<blockquote>
+<p>1.manufacturer：生产商 15个
+2.model：型号 38个
+3.<strong>displ</strong>：引擎排量-L 35个，单位为升，小数
+4.year：出厂年份
+5.cly：汽缸数 4,5,6,8
+6.trans：变速方式：10个
+7.drv：驱动方式 f  r  4
+8.cty ：每加仑汽油能跑的公里数（城市）21个，整数
+9.<strong>hwy</strong>：燃油效率：每加仑汽油能跑的公里数（高速路）单位英里/加仑，燃油效率高说明省油。 27个，整数。
+10.fl：燃油类型，五个 p     r     e     d     c
+11.class：车型  七个 compact   midsize    suv        2seater    minivan   pickup    subcompact</p>
+</blockquote>
+
+<pre><code class="language-r"># 查看每列的非重复值及每个值的重复次数
+# 用dplyr包的distinct函数
+p&lt;-mpg
+library(dplyr)
+distinct(p,manufacturer) # manufacturer替换为其他列名。仅显示非重复值，不显示重复次数。
+count(p,manufacturer) # 显示出现次数
+</code></pre>
+
+<p>练习</p>
+
+<pre><code class="language-R">Run ggplot(data = mpg). What do you see?
+
+# blank
+
+How many rows are in mpg? How many columns?
+
+234 * 11
+
+What does the drv variable describe? Read the help for ?mpg to find out.
+
+# the type of drive train, where f = front-wheel drive, r = rear wheel drive, 4 = 4wd
+
+Make a scatterplot of hwy vs cyl.
+
+What happens if you make a scatterplot of class vs drv? Why is the plot not useful?
+
+非连续变量
+</code></pre>
+
+<h3 id="1-2-图形属性映射">1.2 图形属性映射</h3>
+
+<p>图形属性：点的大小，形状和颜色</p>
+
+<pre><code class="language-R">ggplot(data = mpg) + geom_point(mapping = aes(x =displ, y = hwy, color = class)) # 映射颜色
+
+ggplot(data = mpg) + geom_point(mapping = aes(x =displ, y = hwy), color = &quot;blue&quot;) # 直接设置蓝色
+
+
+ggplot(data = mpg) + geom_point(mapping = aes(x =displ, y = hwy, size = class)) # 映射大小 但不建议使用无序变量映射有序属性(size)
+
+ggplot(data = mpg) + geom_point(mapping = aes(x =displ, y = hwy, alpha = class)) # 映射点的透明度
+
+ggplot(data = mpg) + geom_point(mapping = aes(x =displ, y = hwy, shape = class)) # 映射点的形状 （最多6种）
+</code></pre>
+
+<h5 id="手动设置-在aes外-需要设为有意义的值">手动设置（在aes外）需要设为有意义的值。</h5>
+
+<h5 id="颜色-字符串-blue-red等">颜色：字符串，blue，red等</h5>
+
+<h5 id="大小-单位mm">大小：单位mm</h5>
+
+<h5 id="形状-数字编号表示">形状：数字编号表示</h5>
+
+<ul>
+<li>空心形状 0-14 color边框</li>
+<li>实心形状 15-20 color填充</li>
+<li>填充形状 21-24 color边框，和fill填充</li>
+</ul>
+
+<p>练习</p>
+
+<pre><code class="language-R"># What’s gone wrong with this code? Why are the points not blue?
+
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = &quot;blue&quot;))
+
+在aes内部设置自动映射为因子型，自动分配颜色，所以只有一种默认颜色。在外部设置则为字符串。
+
+# Which variables in mpg are categorical? Which variables are continuous? (Hint: type ?mpg to read the documentation for the dataset). How can you see this information when you run mpg?
+ 
+                                                             The following list contains the categorical variables in mpg.
+
+model
+trans
+drv
+fl
+class
+The following list contains the continuous variables in mpg.
+
+displ
+year
+cyl
+cty
+hwy
+In the printed data frame, angled brackets at the top of each column provide type of each variable.
+                                                               可以使用glimpse 函数          
+
+Map a continuous variable to color, size, and shape. How do these aesthetics behave differently for categorical vs. continuous variables?
+color：  分类：几种独立的颜色； 连续：色谱
+size ：  分类：可出图，不建议使用       连续：与数值大小成正比     shape：  分类：最多六种形状； 连续：无法映射          
+                                                                         
+                                                                         
+                                                                         
+What happens if you map the same variable to multiple aesthetics?
+                                                                多余的图形相关信息，不过可能好看点儿。         
+                                            
+
+What does the stroke aesthetic do? What shapes does it work with? (Hint: use ?geom_point)
+                                                                         
+ggplot(data = mpg) + 
+      geom_point(mapping = aes(x = displ, y = hwy, stroke = 3),shape=21)                                                   适用于散点图，21-24号形状，是图形的轮廓粗细。                      
+
+What happens if you map an aesthetic to something other than a variable name, like aes(colour = displ &lt; 5)? Note, you’ll also need to specify x and y.
+                                                                         
+根据true of false 二分类
+</code></pre>
+
+<h3 id="1-3-分面">1.3 分面</h3>
+
+<pre><code class="language-R"># facet_wrap 应传入离散or分类变量
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  facet_wrap(~ class, nrow = 2)
+</code></pre>
+
+<p>练习</p>
+
+<blockquote>
+<p>What happens if you facet on a continuous variable?</p>
+</blockquote>
+
+<pre><code>ggplot(mpg, aes(x = displ, y = hwy)) +
+  geom_point() +
+  facet_grid(. ~ cty)
+</code></pre>
+
+<p>分散的网格</p>
+
+<blockquote>
+<p>What do the empty cells in plot with <code>facet_grid(drv ~ cyl)</code> mean? How do they relate to this plot?</p>
+</blockquote>
+
+<p>不存在该组合的点</p>
+
+<blockquote>
+<p>What plots does the following code make? What does <code>.</code> do?</p>
+</blockquote>
+
+<p>The symbol <code>.</code> ignores that dimension when faceting. For example, <code>drv ~ .</code> facet by values of <code>drv</code> on the y-axis. ( y ~ x)</p>
+
+<pre><code class="language-R">ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  facet_grid(drv ~ .)
+</code></pre>
+
+<blockquote>
+<p>What are the advantages to using faceting instead of the colour aesthetic? What are the disadvantages? How might the balance change if you had a larger dataset?</p>
+</blockquote>
+
+<p>颜色过多的话不容易区分，faceting分类更清楚。劣势在于无法呈现在一张图。</p>
+
+<p>数据集过大则用颜色不好显示，会有重叠的点。</p>
+
+<blockquote>
+<p>Read <code>?facet_wrap</code>. What does <code>nrow</code> do? What does <code>ncol</code> do? What other options control the layout of the individual panels? Why doesn’t <code>facet_grid()</code> have <code>nrow</code> and <code>ncol</code> variables?</p>
+</blockquote>
+
+<p>wrap只有一个变量分类，所以需要规定排列</p>
+
+<p>grid在确定时已经固定了nrow和ncol，所以无需再定义。</p>
+
+<blockquote>
+<p>When using <code>facet_grid()</code> you should usually put the variable with more unique levels in the columns. Why?</p>
+</blockquote>
+
+<p>列（x轴），方向空间比较大</p>
+
+<h3 id="1-4-几何对象">1.4 几何对象</h3>
+
+<pre><code>ggplot(data = mpg) +
+  geom_smooth(mapping = aes(x = displ, y = hwy, linetype = drv))
+</code></pre>
+
+<p>几何对象可以叠加。</p>
+
+<p>局部映射（放在几何对象）和全局映射（ggplot()函数)。</p>
+
+<p>练习</p>
+
+<blockquote>
+<p>What geom would you use to draw a line chart? A boxplot? A histogram? An area chart?</p>
+</blockquote>
+
+<ul>
+<li>line chart: <code>geom_line()</code></li>
+<li>boxplot: <code>geom_boxplot()</code></li>
+<li>histogram: <code>geom_histogram()</code></li>
+<li>area chart: <code>geom_area()</code></li>
+</ul>
+
+<h3 id="1-5-统计变换">1.5 统计变换</h3>
+
+<p>几何对象可以绘制原始数据，也可以绘制计算出的新数据。</p>
+
+<p>statistical transformation (stat )</p>
+
+<p>查看stat参数的默认值，可以知道使用哪种统计变换。</p>
+
+<p>?geom_bar   stat = count； stat_count()</p>
+
+<pre><code class="language-R">ggplot(data = diamonds) + 
+  geom_bar(mapping = aes(x = cut))
+
+# EQUAL
+
+ggplot(data = diamonds) +
+  stat_count(mapping = aes(x = cut))
+</code></pre>
+
+<p>ggplot2 提供了 20 多个统计变换以供你使用。每个统计变换都是一个函数，因此你可以按照通用方式获得帮助，例如 ?stat_bin。如果想要查看全部的统计变换，可以使用 ggplot2速查表</p>
+
+<p>练习</p>
+
+<blockquote>
+<p>What does <code>geom_col()</code> do? How is it different to <code>geom_bar()</code>?</p>
+
+<p>The <code>geom_col()</code> function has different default stat than <code>geom_bar()</code>. The default stat of <code>geom_col()</code> is <code>stat_identity()</code>, which leaves the data as is. The <code>geom_col()</code> function expects that the data contains <code>x</code> values and <code>y</code> values which represent the bar height.</p>
+
+<p>The default stat of <code>geom_bar()</code> is <code>stat_bin()</code>. The <code>geom_bar()</code> function only expects an <code>x</code> variable. The stat, <code>stat_bin()</code>, preprocesses input data by counting the number of observations for each value of <code>x</code>. The <code>y</code> aesthetic uses the values of these counts.</p>
+</blockquote>
+
+<p>换言之，geombar 设置stat = &ldquo;identity&rdquo; 即可达到geom_col的效果</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>geom</td>
+<td>stat</td>
+</tr>
+
+<tr>
+<td><code>geom_bar()</code></td>
+<td><code>stat_count()</code></td>
+</tr>
+
+<tr>
+<td><code>geom_bin2d()</code></td>
+<td><code>stat_bin_2d()</code></td>
+</tr>
+
+<tr>
+<td><code>geom_boxplot()</code></td>
+<td><code>stat_boxplot()</code></td>
+</tr>
+
+<tr>
+<td><code>geom_contour()</code></td>
+<td><code>stat_contour()</code></td>
+</tr>
+
+<tr>
+<td><code>geom_count()</code></td>
+<td><code>stat_sum()</code></td>
+</tr>
+
+<tr>
+<td><code>geom_density()</code></td>
+<td><code>stat_density()</code></td>
+</tr>
+
+<tr>
+<td><code>geom_density_2d()</code></td>
+<td><code>stat_density_2d()</code></td>
+</tr>
+
+<tr>
+<td><code>geom_hex()</code></td>
+<td><code>stat_hex()</code></td>
+</tr>
+
+<tr>
+<td><code>geom_freqpoly()</code></td>
+<td><code>stat_bin()</code></td>
+</tr>
+
+<tr>
+<td><code>geom_histogram()</code></td>
+<td><code>stat_bin()</code></td>
+</tr>
+
+<tr>
+<td><code>geom_qq_line()</code></td>
+<td><code>stat_qq_line()</code></td>
+</tr>
+
+<tr>
+<td><code>geom_qq()</code></td>
+<td><code>stat_qq()</code></td>
+</tr>
+
+<tr>
+<td><code>geom_quantile()</code></td>
+<td><code>stat_quantile()</code></td>
+</tr>
+
+<tr>
+<td><code>geom_smooth()</code></td>
+<td><code>stat_smooth()</code></td>
+</tr>
+
+<tr>
+<td><code>geom_violin()</code></td>
+<td><code>stat_violin()</code></td>
+</tr>
+
+<tr>
+<td><code>geom_sf()</code></td>
+<td>stat_sf()</td>
+</tr>
+</tbody>
+</table>
+
+<p>​                   ggplot2 geom layers and their default stats.</p>
+
+<table>
+<thead>
+<tr>
+<th>geom</th>
+<th>default stat</th>
+<th>shared docs</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>geom_abline()</code></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>geom_hline()</code></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>geom_vline()</code></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>geom_bar()</code></td>
+<td><code>stat_count()</code></td>
+<td>x</td>
+</tr>
+
+<tr>
+<td><code>geom_col()</code></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>geom_bin2d()</code></td>
+<td><code>stat_bin_2d()</code></td>
+<td>x</td>
+</tr>
+
+<tr>
+<td><code>geom_blank()</code></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>geom_boxplot()</code></td>
+<td><code>stat_boxplot()</code></td>
+<td>x</td>
+</tr>
+
+<tr>
+<td><code>geom_countour()</code></td>
+<td><code>stat_countour()</code></td>
+<td>x</td>
+</tr>
+
+<tr>
+<td><code>geom_count()</code></td>
+<td><code>stat_sum()</code></td>
+<td>x</td>
+</tr>
+
+<tr>
+<td><code>geom_density()</code></td>
+<td><code>stat_density()</code></td>
+<td>x</td>
+</tr>
+
+<tr>
+<td><code>geom_density_2d()</code></td>
+<td><code>stat_density_2d()</code></td>
+<td>x</td>
+</tr>
+
+<tr>
+<td><code>geom_dotplot()</code></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>geom_errorbarh()</code></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>geom_hex()</code></td>
+<td><code>stat_hex()</code></td>
+<td>x</td>
+</tr>
+
+<tr>
+<td><code>geom_freqpoly()</code></td>
+<td><code>stat_bin()</code></td>
+<td>x</td>
+</tr>
+
+<tr>
+<td><code>geom_histogram()</code></td>
+<td><code>stat_bin()</code></td>
+<td>x</td>
+</tr>
+
+<tr>
+<td><code>geom_crossbar()</code></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>geom_errorbar()</code></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>geom_linerange()</code></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>geom_pointrange()</code></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>geom_map()</code></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>geom_point()</code></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>geom_map()</code></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>geom_path()</code></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>geom_line()</code></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>geom_step()</code></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>geom_point()</code></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>geom_polygon()</code></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>geom_qq_line()</code></td>
+<td><code>stat_qq_line()</code></td>
+<td>x</td>
+</tr>
+
+<tr>
+<td><code>geom_qq()</code></td>
+<td><code>stat_qq()</code></td>
+<td>x</td>
+</tr>
+
+<tr>
+<td><code>geom_quantile()</code></td>
+<td><code>stat_quantile()</code></td>
+<td>x</td>
+</tr>
+
+<tr>
+<td><code>geom_ribbon()</code></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>geom_area()</code></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>geom_rug()</code></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>geom_smooth()</code></td>
+<td><code>stat_smooth()</code></td>
+<td>x</td>
+</tr>
+
+<tr>
+<td><code>geom_spoke()</code></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>geom_label()</code></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>geom_text()</code></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>geom_raster()</code></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>geom_rect()</code></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>geom_tile()</code></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>geom_violin()</code></td>
+<td><code>stat_ydensity()</code></td>
+<td>x</td>
+</tr>
+
+<tr>
+<td><code>geom_sf()</code></td>
+<td><code>stat_sf()</code></td>
+<td>x</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr>
+<th>stat</th>
+<th>default geom</th>
+<th>shared docs</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>stat_ecdf()</code></td>
+<td><code>geom_step()</code></td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>stat_ellipse()</code></td>
+<td><code>geom_path()</code></td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>stat_function()</code></td>
+<td><code>geom_path()</code></td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>stat_identity()</code></td>
+<td><code>geom_point()</code></td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>stat_summary_2d()</code></td>
+<td><code>geom_tile()</code></td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>stat_summary_hex()</code></td>
+<td><code>geom_hex()</code></td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>stat_summary_bin()</code></td>
+<td><code>geom_pointrange()</code></td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>stat_summary()</code></td>
+<td><code>geom_pointrange()</code></td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>stat_unique()</code></td>
+<td><code>geom_point()</code></td>
+<td></td>
+</tr>
+
+<tr>
+<td><code>stat_count()</code></td>
+<td><code>geom_bar()</code></td>
+<td>x</td>
+</tr>
+
+<tr>
+<td><code>stat_bin_2d()</code></td>
+<td><code>geom_tile()</code></td>
+<td>x</td>
+</tr>
+
+<tr>
+<td><code>stat_boxplot()</code></td>
+<td><code>geom_boxplot()</code></td>
+<td>x</td>
+</tr>
+
+<tr>
+<td><code>stat_countour()</code></td>
+<td><code>geom_contour()</code></td>
+<td>x</td>
+</tr>
+
+<tr>
+<td><code>stat_sum()</code></td>
+<td><code>geom_point()</code></td>
+<td>x</td>
+</tr>
+
+<tr>
+<td><code>stat_density()</code></td>
+<td><code>geom_area()</code></td>
+<td>x</td>
+</tr>
+
+<tr>
+<td><code>stat_density_2d()</code></td>
+<td><code>geom_density_2d()</code></td>
+<td>x</td>
+</tr>
+
+<tr>
+<td><code>stat_bin_hex()</code></td>
+<td><code>geom_hex()</code></td>
+<td>x</td>
+</tr>
+
+<tr>
+<td><code>stat_bin()</code></td>
+<td><code>geom_bar()</code></td>
+<td>x</td>
+</tr>
+
+<tr>
+<td><code>stat_qq_line()</code></td>
+<td><code>geom_path()</code></td>
+<td>x</td>
+</tr>
+
+<tr>
+<td><code>stat_qq()</code></td>
+<td><code>geom_point()</code></td>
+<td>x</td>
+</tr>
+
+<tr>
+<td><code>stat_quantile()</code></td>
+<td><code>geom_quantile()</code></td>
+<td>x</td>
+</tr>
+
+<tr>
+<td><code>stat_smooth()</code></td>
+<td><code>geom_smooth()</code></td>
+<td>x</td>
+</tr>
+
+<tr>
+<td><code>stat_ydensity()</code></td>
+<td><code>geom_violin()</code></td>
+<td>x</td>
+</tr>
+
+<tr>
+<td><code>stat_sf()</code></td>
+<td><code>geom_rect()</code></td>
+<td>x</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="1-6-位置调整">1.6 位置调整</h3>
+
+<p>geom_jitter avoid over plotting</p>
+
+<p>练习</p>
+
+<blockquote>
+<p>What’s the default position adjustment for <code>geom_boxplot()</code>? Create a visualization of the <code>mpg</code> dataset that demonstrates it.</p>
+</blockquote>
+
+<p>“dodge2:”</p>
+
+<h3 id="1-7-坐标系">1.7 坐标系</h3>
+
+<p>coord_flip() 交换x和y轴</p>
+
+<p>coord_quickmap()  设置纵横比</p>
+
+<p>coord_polar()</p>
+
+<blockquote>
+<p>What does <code>labs()</code> do? Read the documentation.</p>
+</blockquote>
+
+<pre><code class="language-R">ggplot(data = mpg, mapping = aes(x = class, y = hwy)) +
+  geom_boxplot() +
+  coord_flip() +
+  labs(
+    y = &quot;Highway MPG&quot;,
+    x = &quot;Class&quot;,
+    title = &quot;Highway MPG by car class&quot;,
+    subtitle = &quot;1999-2008&quot;,
+    caption = &quot;Source: http://fueleconomy.gov&quot;
+  )
+</code></pre>
+
+<blockquote>
+<p>What does the plot below tell you about the relationship between city and highway mpg? Why is <code>coord_fixed()</code> important? What does <code>geom_abline()</code> do?</p>
+</blockquote>
+
+<p>固定角度，45度。</p>
+
+<p>1.8 图形分层语法</p>
+
+<pre><code class="language-R">ggplot(data = &lt;DATA&gt;) + 
+  &lt;GEOM_FUNCTION&gt;(
+     mapping = aes(&lt;MAPPINGS&gt;),
+     stat = &lt;STAT&gt;, 
+     position = &lt;POSITION&gt;
+  ) +
+  &lt;COORDINATE_FUNCTION&gt; +
+  &lt;FACET_FUNCTION&gt;
+</code></pre>
+
+<p><em>any</em> plot as a combination of a <strong>dataset</strong>, a <strong>geom</strong>, a set of <strong>mappings</strong>, a <strong>stat</strong>, a <strong>position adjustment</strong>, a <strong>coordinate system</strong>, and a <strong>facet</strong>ing scheme.</p>
+
+<h2 id="2-工作流-基础">2 工作流：基础</h2>
+
+<p>alt shift k 查看快捷键</p>
+
+<h2 id="3-使用dplyr进行数据转换">3 使用dplyr进行数据转换</h2>
+
+<h3 id="3-1-dplyr-基础">3.1 dplyr 基础</h3>
+
+<ul>
+<li>Pick observations by their values (<code>filter()</code>).</li>
+<li>Reorder the rows (<code>arrange()</code>).</li>
+<li>Pick variables by their names (<code>select()</code>).</li>
+<li>Create new variables with functions of existing variables (<code>mutate()</code>).</li>
+<li>Collapse many values down to a single summary (<code>summarise()</code>).</li>
+</ul>
+
+<p>These can all be used in conjunction with <code>group_by()</code> which changes the scope of each function from operating on the entire dataset to operating on it group-by-group. These six functions provide the verbs for a language of data manipulation.</p>
+
+<p>All verbs work similarly:</p>
+
+<ol>
+<li>The first argument is a data frame.</li>
+<li>The subsequent arguments describe what to do with the data frame, using the variable names (without quotes).</li>
+<li>The result is a new data frame.</li>
+</ol>
+
+<h3 id="3-2-使用filter-筛选行">3.2 使用filter() 筛选行</h3>
+
+<pre><code class="language-R">jan1 &lt;- filter(flights, month == 1, day == 1)
+</code></pre>
+
+<p>比较运算符</p>
+
+<pre><code class="language-R">比较浮点数需要忽略点精度
+
+sqrt(2) ^ 2 == 2
+#&gt; [1] FALSE
+
+near(sqrt(2) ^ 2, 2)
+#&gt; [1] TRUE
+</code></pre>
+
+<p>逻辑运算符</p>
+
+<pre><code class="language-R">## 下面两个是等价的
+filter(flights, month == 11 | month == 12)
+
+nov_dec &lt;- filter(flights, month %in% c(11, 12))
+
+######
+
+filter(flights, !(arr_delay &gt; 120 | dep_delay &gt; 120))
+filter(flights, arr_delay &lt;= 120, dep_delay &lt;= 120)
+</code></pre>
+
+<p>只要 filter() 函数中使用的是复杂的、包含多个部分的表达式，就需要考虑用一个明确的变量来代替它。这样检查代码会容易很多。我们很快就会介绍如何创建新变量 。</p>
+
+<p>缺失值</p>
+
+<p>NA</p>
+
+<pre><code>is.na(x)
+</code></pre>
+
+<p>练习</p>
+
+<pre><code class="language-R">filter(flights, dest == &quot;IAH&quot; | dest == &quot;HOU&quot;)
+
+filter(flights, dest %in% c(&quot;IAH&quot;, &quot;HOU&quot;))
+
+filter(flights, month &gt;= 7, month &lt;= 9)
+
+filter(flights, month %in% 7:9)
+</code></pre>
+
+<blockquote>
+<p>Another useful dplyr filtering helper is <code>between()</code>. What does it do? Can you use it to simplify the code needed to answer the previous challenges?</p>
+</blockquote>
+
+<p>The expression <code>between(x, left, right)</code> is equivalent to <code>x &gt;= left &amp; x &lt;= right</code>.</p>
+
+<p>Of the answers in the previous question, we could simplify the statement of <em>departed in summer</em> (<code>month &gt;= 7 &amp; month &lt;= 9</code>) using the <code>between()</code> function.</p>
+
+<pre><code class="language-R">filter(flights, is.na(dep_time))
+</code></pre>
+
+<p><code>NA ^ 0 == 1</code> since for all numeric values x0=1x0=1.</p>
+
+<pre><code>NA^0
+#&gt; [1] 1
+</code></pre>
+
+<p><code>NA | TRUE</code> is <code>TRUE</code> because the value of the missing <code>TRUE</code> or <code>FALSE</code>, xx or <code>TRUE</code> is <code>TRUE</code> for all values of xx.</p>
+
+<pre><code>NA | TRUE
+#&gt; [1] TRUE
+</code></pre>
+
+<p>Likewise, anything and <code>FALSE</code> is always <code>FALSE</code>.</p>
+
+<pre><code>NA &amp; FALSE
+#&gt; [1] FALSE
+</code></pre>
+
+<pre><code>NA * 0
+#&gt; [1] NA
+</code></pre>
+
+<h3 id="3-3-使用arrange-排列行">3.3  使用arrange()排列行</h3>
+
+<p>练习</p>
+
+<blockquote>
+<p>How could you use <code>arrange()</code> to sort all missing values to the start? (Hint: use <code>is.na()</code>).</p>
+</blockquote>
+
+<pre><code class="language-R">arrange(flights, desc(is.na(dep_time)))
+</code></pre>
+
+<p>逻辑值true&gt;false，所以逆序排列false会在true之上。所以na值会先出现。</p>
+
+<blockquote>
+<p>Sort flights to find the most delayed flights. Find the flights that left earliest.</p>
+</blockquote>
+
+<pre><code class="language-R">arrange(flights, desc(dep_delay))
+arrange(flights, dep_delay)
+</code></pre>
+
+<blockquote>
+<p>Sort flights to find the fastest flights</p>
+</blockquote>
+
+<pre><code class="language-R">fastest_flights &lt;- mutate(flights, mph = distance / air_time * 60)
+fastest_flights &lt;- select(
+  fastest_flights, mph, distance, air_time,
+  flight, origin, dest, year, month, day
+)
+
+head(arrange(fastest_flights, desc(mph)))
+</code></pre>
+
+<blockquote>
+<p>Which flights traveled the longest? Which traveled the shortest?</p>
+</blockquote>
+
+<h3 id="3-4-使用select-选择列">3.4 使用select() 选择列</h3>
+
+<pre><code class="language-R"># 选择“year”和“day”之间的所有列（包括“year”和“day”）
+select(flights, year:day)
+
+# 选择不在“year”和“day”之间的所有列（不包括“year”和“day”）
+select(flights, -(year:day))
+</code></pre>
+
+<p>• starts_with(&ldquo;abc&rdquo;)：匹配以“abc”开头的名称。
+• ends_with(&ldquo;xyz&rdquo;)：匹配以“xyz”结尾的名称。
+• contains(&ldquo;ijk&rdquo;)：匹配包含“ijk”的名称。
+• matches(&ldquo;(.)\1&rdquo;)：选择匹配正则表达式的那些变量。这个正则表达式会匹配名称中有重复字符的变量。你将在第 10 章中学习到更多关于正则表达式的知识。
+• num_range(&ldquo;x&rdquo;, 1:3)：匹配 x1、 x2 和 x3。</p>
+
+<pre><code># 重命名变量
+
+rename(flights, tail_num = tailnum)
+
+# 调整变量顺序，保留其他变量。
+
+select(flights, time_hour, air_time, everything())
+</code></pre>
+
+<p>练习</p>
+
+<blockquote>
+<p>Brainstorm as many ways as possible to select <code>dep_time</code>, <code>dep_delay</code>, <code>arr_time</code>, and <code>arr_delay</code> from flights.</p>
+</blockquote>
+
+<pre><code class="language-R">select(flights, &quot;dep_time&quot;, &quot;dep_delay&quot;, &quot;arr_time&quot;, &quot;arr_delay&quot;)
+
+select(flights, one_of(c(&quot;dep_time&quot;, &quot;dep_delay&quot;, &quot;arr_time&quot;, &quot;arr_delay&quot;)))
+
+select(flights, starts_with(&quot;dep_&quot;), starts_with(&quot;arr_&quot;))
+
+select(flights, matches(&quot;^(dep|arr)_(time|delay)$&quot;)) # REGULAR EXPRESSION
+</code></pre>
+
+<blockquote>
+<p>What happens if you include the name of a variable multiple times in a <code>select()</code> call?</p>
+</blockquote>
+
+<p>重复的列会忽略</p>
+
+<pre><code class="language-R">select(flights, vars)
+
+select(flights, !!!vars)
+</code></pre>
+
+<h3 id="3-5-使用mutate-添加新变量">3.5 使用mutate() 添加新变量</h3>
+
+<pre><code class="language-R"># 将新列添加到数据集的最后
+
+flights_sml &lt;- select(flights,
+year:day,
+ends_with(&quot;delay&quot;),
+distance,
+air_time
+)
+mutate(flights_sml,
+gain = arr_delay - dep_delay,
+speed = distance / air_time * 60
+)
+
+mutate(flights_sml,
+gain = arr_delay - dep_delay,
+hours = air_time / 60,
+gain_per_hour = gain / hours
+)
+
+# 只保留新变量
+
+transmute(flights,
+gain = arr_delay - dep_delay,
+hours = air_time / 60,
+gain_per_hour = gain / hours
+)
+
+# 常用函数
+
+(x &lt;- 1:10)
+#&gt;  [1]  1  2  3  4  5  6  7  8  9 10
+lag(x)
+#&gt;  [1] NA  1  2  3  4  5  6  7  8  9
+lead(x)
+#&gt;  [1]  2  3  4  5  6  7  8  9 10 NA
+
+
+x
+#&gt;  [1]  1  2  3  4  5  6  7  8  9 10
+cumsum(x)
+#&gt;  [1]  1  3  6 10 15 21 28 36 45 55
+cummean(x)
+#&gt;  [1] 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5 5.0 5.5
+
+
+
+</code></pre>
+
+<p>练习</p>
+
+<blockquote>
+<p>What does <code>1:3 + 1:10</code> return? Why?</p>
+</blockquote>
+
+<pre><code class="language-R">c(1 + 1, 2 + 2, 3 + 3, 1 + 4, 2 + 5, 3 + 6, 1 + 7, 2 + 8, 3 + 9, 1 + 10)
+#&gt;  [1]  2  4  6  5  7  9  8 10 12 11
+
+# 循环较短的变量达到长变量的长度
+</code></pre>
+
+<blockquote>
+<p>Find the 10 most delayed flights using a ranking function. How do you want to handle ties? Carefully read the documentation for <code>min_rank()</code>.</p>
+</blockquote>
+
+<pre><code class="language-R">rankme &lt;- mutate(rankme,
+  x_row_number = row_number(x),
+  x_min_rank = min_rank(x),
+  x_dense_rank = dense_rank(x)
+)
+arrange(rankme, x)
+#&gt; # A tibble: 5 x 4
+#&gt;       x x_row_number x_min_rank x_dense_rank
+#&gt;   &lt;dbl&gt;        &lt;int&gt;      &lt;int&gt;        &lt;int&gt;
+#&gt; 1     1            1          1            1
+#&gt; 2     5            2          2            2
+#&gt; 3     5            3          2            2
+#&gt; 4     5            4          2            2
+#&gt; 5    10            5          5            3
+</code></pre>
+
+<blockquote>
+<p>What trigonometric functions does R provide?</p>
+</blockquote>
+
+<p>All trigonometric functions are all described in a single help page, named <code>Trig</code>. You can open the documentation for these functions with <code>?Trig</code> or by using <code>?</code> with any of the following functions, for example:<code>?sin</code>.</p>
+
+<pre><code class="language-R"># 使用pi防止覆盖的方法
+
+base::pi
+#&gt; [1] 3.14
+</code></pre>
+
+<h3 id="3-6-使用summarize-进行分组摘要">3.6 使用summarize() 进行分组摘要</h3>
+
+<pre><code class="language-R">summarize(flights, delay = mean(dep_delay, na.rm = TRUE))
+
+# 先 分组 再 合并
+by_day &lt;- group_by(flights, year, month, day)
+summarize(by_day, delay = mean(dep_delay, na.rm = TRUE))
+
+
+
+
+</code></pre>
+
+<p>管道符</p>
+
+<pre><code class="language-R">by_dest &lt;- group_by(flights, dest)
+delay &lt;- summarize(by_dest,
+count = n(),
+dist = mean(distance, na.rm = TRUE),
+delay = mean(arr_delay, na.rm = TRUE)
+)
+delay &lt;- filter(delay, count &gt; 20, dest != &quot;HNL&quot;)
+
+ggplot(data = delay, mapping = aes(x = dist, y = delay)) +
+geom_point(aes(size = count), alpha = 1/3) +
+geom_smooth(se = FALSE)
+#&gt; `geom_smooth()` using method = 'loess'
+
+# 管道符简化版本
+delays &lt;- flights %&gt;%
+group_by(dest) %&gt;%
+summarize(
+count = n(),
+dist = mean(distance, na.rm = TRUE),
+delay = mean(arr_delay, na.rm = TRUE)
+) %&gt;%
+filter(count &gt; 20, dest != &quot;HNL&quot;)
+</code></pre>
+
+<p>常用摘要函数</p>
+
+<pre><code class="language-R">sd(x)、 IQR(x) 和 mad(x)
+
+min(x)、 quantile(x, 0.25) 和 max(x)
+
+first(x)、 nth(x, 2) 和 last(x)
+
+rank系列函数
+
+n()  n_distinct(x)
+
+count(tailnum, wt = distance)
+
+summarize(n_early = sum(dep_time &lt; 500)) # 逻辑值计数和比例
+
+# sum(x)求总数 mean(x) 求比例 
+</code></pre>
+
+<p>按多个变量分组</p>
+
+<p>当使用多个变量进行分组时，每次的摘要统计会用掉一个分组变量。这样就可以轻松地对数据集进行循序渐进的分析 。</p>
+
+<p>ungroup()</p>
+
+<pre><code class="language-R">daily %&gt;%
+ungroup() %&gt;% # 不再按日期分组
+summarize(flights = n()) # 所有航班
+</code></pre>
+
+<p>练习</p>
+
+<blockquote>
+<p>Come up with another approach that will give you the same output as <code>not_cancelled %&gt;% count(dest)</code> and <code>not_cancelled %&gt;% count(tailnum, wt = distance)</code> (without using <code>count()</code>).</p>
+</blockquote>
+
+<pre><code class="language-R">not cancelled %&gt;%
+  group_by(dest) %&gt;%
+  summarise(n = length(dest))
+
+not_cancelled %&gt;%
+  group_by(dest) %&gt;%
+  summarise(n = n())
+
+not_cancelled %&gt;%
+  group_by(tailnum) %&gt;%
+  tally()
+
+
+not_cancelled %&gt;%
+  group_by(tailnum) %&gt;%
+  summarise(n = sum(distance))
+</code></pre>
+
+<blockquote>
+<p>What does the sort argument to <code>count()</code> do? When might you use it?</p>
+
+<blockquote>
+<p>The sort argument to <code>count()</code> sorts the results in order of <code>n</code>. You could use this anytime you would run <code>count()</code> followed by <code>arrange()</code>.</p>
+</blockquote>
+</blockquote>
+
+<p>查看每天取消的航班数量。其中存在模式吗？已取消航班的比例与平均延误时间有关系吗？</p>
+
+<pre><code class="language-R">
+cancelled_and_delays &lt;-
+  flights %&gt;%
+  mutate(cancelled = (is.na(arr_delay) | is.na(dep_delay))) %&gt;%
+  group_by(year, month, day) %&gt;%
+  summarise(
+    cancelled_prop = mean(cancelled),
+    avg_dep_delay = mean(dep_delay, na.rm = TRUE),
+    avg_arr_delay = mean(arr_delay, na.rm = TRUE)
+  ) %&gt;%
+  ungroup()
+</code></pre>
+
+<h2 id="4-工作流-脚本">4 工作流：脚本</h2>
+
+<h2 id="5-探索性数据分析">5 探索性数据分析</h2>
+
+<p>分类与连续变量</p>
+
+<pre><code class="language-R">ggplot(data = diamonds, mapping = aes(x = price)) +
+geom_freqpoly(mapping = aes(color = cut), binwidth = 500)
+
+# 箱线图
+ggplot(data = mpg, mapping = aes(x = class, y = hwy)) +
+geom_boxplot()
+
+</code></pre>
+
+<p>重排序</p>
+
+<pre><code>ggplot(data = mpg) +
+geom_boxplot(
+  mapping = aes(
+    x = reorder(class, hwy, FUN = median),
+    y = hwy
+  )
+)
+</code></pre>
+
+<p>两个分类变量</p>
+
+<pre><code class="language-R"># 1 geom_count
+
+ggplot(data = diamonds) +
+geom_count(mapping = aes(x = cut, y = color))\
+
+# 2 热图
+
+diamonds %&gt;%
+count(color, cut) %&gt;%
+ggplot(mapping = aes(x = color, y = cut)) +
+geom_tile(mapping = aes(fill = n))
+</code></pre>
+
+<p>两个连续变量</p>
+
+<pre><code class="language-R"># 散点图
+
+ggplot(data = diamonds) +
+geom_point(mapping = aes(x = carat, y = price))
+
+# 解决over-plotting 方法
+ggplot(data = diamonds) +
+geom_point(
+mapping = aes(x = carat, y = price),
+alpha = 1 / 100
+)
+
+# 两维度进行分箱
+
+geom_bin2d() 和 geom_hex() 函数在两个维度上进行分箱
+
+ggplot(data = smaller) +
+geom_bin2d(mapping = aes(x = carat, y = price))
+# install.packages(&quot;hexbin&quot;)
+ggplot(data = smaller) +
+geom_hex(mapping = aes(x = carat, y = price))
+
+
+# 对其中一个连续变量进行分箱（相当于产生一个分类变量）
+ggplot(data = smaller, mapping = aes(x = carat, y = price)) +
+geom_boxplot(mapping = aes(group = cut_width(carat, 0.1)))
+</code></pre>
+
+<h2 id="6-工作流-项目">6 工作流：项目</h2>
+
+<p>ctrl + shift + F10 重启RStudio</p>
+
+<p>ctrl + shift + s 重新运行当前脚本</p>
+
+<p>ctrl + enter 运行一段脚本</p>
+
+<p>路径和目录</p>
+
+<p>：建议直接使用正斜杠，因为反斜杠为转义符，需要输入两个反斜杠才可以。</p>
+
+<p>绝对路径的开头</p>
+
+<pre><code>/xxx/example
+or // 
+其他为相对路径
+</code></pre>
+
+<p>新建项目</p>
+
+<p>创建rproject</p>
+
+<pre><code class="language-R"># 创建 diamonds.R
+
+library(tidyverse)
+ggplot(diamonds, aes(carat, price)) +
+geom_hex()
+ggsave(&quot;diamonds.pdf&quot;)
+write_csv(diamonds, &quot;diamonds.csv&quot;)
+
+</code></pre>
+
+<p>点击 .Rproj 可以重现该项目</p>
+
+<p>为每个数据分析任务创建 RStudio 项目。
+• 在项目中保存数据文件。我们会在第 8 章中讨论将数据文件加载到 R 中的方法。
+• 在项目中保存脚本。编辑脚本并按照命令运行脚本或运行整个脚本。
+• 在项目中保存输出（图形和清洁的数据）。
+• 只使用相对路径，不要使用绝对路径。</p>
+
+<h2 id="第二部分-数据处理篇">第二部分 <strong>数据处理篇</strong></h2>
+
+<h2 id="7-使用tibble实现简单数据框">7 使用tibble实现简单数据框</h2>
+
+<pre><code class="language-R"># data frame transformation
+
+as.tibble(xx)
+
+# transform to dataframe 
+as.data.frame(xx)
+
+# new tibble
+
+tibble(
+  x = 1:5,
+  y = 1,
+  z = x ^ 2 + y
+)
+
+# transposed tibble
+
+tribble(
+  ~x, ~y, ~z,
+  #--/--/----
+  &quot;a&quot;, 2, 3.6,
+  &quot;b&quot;, 1, 8.5
+)
+</code></pre>
+
+<p>打印</p>
+
+<pre><code class="language-R"># 默认显示前10行，且打印出列的类型
+
+print(n = 10, width = Inf) # 打印10列，所有列。
+</code></pre>
+
+<p>取子集</p>
+
+<pre><code>df$x
+
+df[[&quot;x&quot;]]
+
+df[[1]]
+</code></pre>
+
+<h2 id="8-使用readr进行数据导入">8 使用readr进行数据导入</h2>
+
+<pre><code class="language-R">read_tsv()
+read_fwf()
+
+# example
+
+heights &lt;- read_csv(&quot;data/heights.csv&quot;)
+
+
+read_csv(&quot;The first line of metadata
+The second line of metadata
+x,y,z
+1,2,3&quot;, skip = 2)
+
+read_csv(&quot;# A comment I want to skip
+x,y,z
+1,2,3&quot;, comment = &quot;#&quot;)
+
+read_csv(&quot;1,2,3\n4,5,6&quot;, col_names = FALSE)
+</code></pre>
+
+<p>与R基础包进行比较</p>
+
+<p>1.速度快</p>
+
+<p>2.生成tibble，不使用行名称，也不会随意改动列名称。</p>
+
+<p>3.易于重复使用</p>
+
+<p>解析向量</p>
+
+<p>我们需要先讨论一下 parse_*() 函数族。这些函数接受一个字符向量，并返回一个特定向量，如逻辑、整数或日期向量 。</p>
+
+<pre><code class="language-R">str(parse_logical(c(&quot;TRUE&quot;, &quot;FALSE&quot;, &quot;NA&quot;)))
+#&gt; logi [1:3] TRUE FALSE NA
+str(parse_integer(c(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;)))
+#&gt; int [1:3] 1 2 3
+str(parse_date(c(&quot;2010-01-01&quot;, &quot;1979-10-14&quot;)))
+#&gt; Date[1:2], format: &quot;2010-01-01&quot; &quot;1979-10-14&quot;
+
+parse_integer(c(&quot;1&quot;, &quot;231&quot;, &quot;.&quot;, &quot;456&quot;), na = &quot;.&quot;)
+</code></pre>
+
+<p>解析失败的值在输出中是以缺失值的形式存在的</p>
+
+<p>重要的解析函数有 8 种。
+• parse_logical() 和 parse_integer() 函数分别解析逻辑值和整数。因为这两个解析函数基本不会出现问题，所以我们不再进行更多介绍。</p>
+
+<p>• parse_double() 是严格的数值型解析函数， parse_number() 则是灵活的数值型解析函数。这两个函数要比你预想的更复杂，因为世界各地书写数值的方式不尽相同。</p>
+
+<p>• parse_character() 函数似乎太过简单，甚至没必要存在。但一个棘手的问题使得这个函数变得非常重要：字符编码。</p>
+
+<p>• parse_factor() 函数可以创建因子， R 使用这种数据结构来表示分类变量，该变量具有固定数目的已知值。</p>
+
+<p>• parse_datetime()、 parse_date() 和 parse_time() 函数可以解析不同类型的日期和时间。它们是最复杂的，因为有太多不同的日期书写形式。</p>
+
+<pre><code class="language-R">组合使用 parse_number() 和地区设置可以解决最后一个问题，因为 parse_number() 可以忽
+略“分组符号”：
+# 适用于美国
+parse_number(&quot;$123,456,789&quot;)
+#&gt; [1] 1.23e+08
+# 适用于多数欧洲国家
+parse_number(
+&quot;123.456.789&quot;,
+locale = locale(grouping_mark = &quot;.&quot;)
+)
+#&gt; [1] 1.23e+08
+# 适用于瑞士
+parse_number(
+&quot;123'456'789&quot;,
+locale = locale(grouping_mark = &quot;'&quot;)
+)
+#&gt; [1] 1.23e+08
+</code></pre>
+
+<p>因子</p>
+
+<pre><code class="language-R">fruit &lt;- c(&quot;apple&quot;, &quot;banana&quot;)
+parse_factor(c(&quot;apple&quot;, &quot;banana&quot;, &quot;bananana&quot;), levels = fruit)
+</code></pre>
+
+<p>解析文件</p>
+
+<pre><code>
+</code></pre>
+
+<p>写入文件</p>
+
+<pre><code>write_csv()
+
+wrtie_tsv()
+</code></pre>
+
+<h2 id="9-使用dplyr处理关系数据">9 使用dplyr处理关系数据</h2>
+
+<p>要想处理关系数据，你需要能够在两张表之间进行的操作。我们设计了三类操作来处理关系数据。
+• 合并连接：向数据框中加入新变量，新变量的值是另一个数据框中的匹配观测。
+• 筛选连接：根据是否匹配另一个数据框中的观测，筛选数据框中的观测。
+• 集合操作：将观测作为集合元素来处理。</p>
+
+<p>键的类型有两种。
+• <strong>主键</strong>：唯一标识其所在数据表中的观测。例如， planes$tailnum 是一个主键，因为其可以唯一标识 planes 表中的每架飞机。
+• <strong>外键</strong>：唯一标识另一个数据表中的观测。例如， flights$tailnum 是一个外键，因为其出现在 flights 表中，并可以将每次航班与唯一一架飞机匹配。</p>
+
+<p>一旦识别出表的主键，最好验证一下，看看它们能否真正唯一标识每个观测。一种验证方法是对<strong>主键</strong>进行 count() 操作，然后查看是否有 n 大于 1 的记录。</p>
+
+<p>如果一张表没有主键，有时就需要使用 mutate() 函数和 row_number() 函数为表加上一个主键。这样一来，如果你完成了一些筛选工作，并想要使用原始数据检查的话，就可以更容易地匹配观测。这种主键称为<strong>代理键</strong> 。</p>
+
+<p>合并连接：</p>
+
+<pre><code class="language-r"># example
+x &lt;- tribble(
+~key, ~val_x,
+1, &quot;x1&quot;,
+2, &quot;x2&quot;,
+3, &quot;x3&quot;
+)
+y &lt;- tribble(
+~key, ~val_y,
+1, &quot;y1&quot;,
+2, &quot;y2&quot;,
+4, &quot;y3&quot;
+)
+</code></pre>
+
+<p>内连接：保留同时存在两个表中的观测</p>
+
+<p>内连接最重要的性质是，没有匹配的行不会包含在结果中</p>
+
+<pre><code class="language-R">x %&gt;%
+inner_join(y, by = &quot;key&quot;)
+#&gt; # A tibble: 2 × 3
+#&gt; key val_x val_y
+#&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;
+#&gt; 1 1 x1 y1
+#&gt; 2 2 x2 y2
+
+
+</code></pre>
+
+<p>外连接：保留至少存在一个表中的观测</p>
+
+<p>不存在重复键的情况</p>
+
+<pre><code># 左连接
+保留x中的所有观测
+#右连接
+保留 y 中的所有观测
+#全连接
+保留 x 和 y 中的所有观测。
+</code></pre>
+
+<p>重复键</p>
+
+<p>一对多：重复值</p>
+
+<p>多对多：笛卡尔积</p>
+
+<p>筛选连接</p>
+
+<p>• semi_join(x, y)： 保留 x 表中与 y 表中的观测相匹配的所有观测。
+• anti_join(x, y)： 丢弃 x 表中与 y 表中的观测相匹配的所有观测。</p>
+
+<p>base::merge()函数</p>
+
+<pre><code class="language-R"># dplyr            merge
+inner_join(x, y) merge(x, y)
+left_join(x, y) merge(x, y, all.x = TRUE)
+right_join(x, y) merge(x, y, all.y = TRUE)
+full_join(x, y) merge(x, y, all.x = TRUE, all.y = TRUE)
+</code></pre>
+
+<p>注意事项</p>
+
+<p>1需要找出每个表中可以作为主键的变量</p>
+
+<p>​   经度和纬度虽然能够唯一标识每个机场，但却不是良好的标识符！</p>
+
+<p>2 确保主键中的每个变量都没有缺失值</p>
+
+<p>3检查外键是否与另一张表的主键相匹配。最好的方法是使用 anti_join()，由于数据录入错误，外键和主键不匹配的情况很常见。解决这种问题通常需要大量工作 。</p>
+
+<p>集合操作</p>
+
+<pre><code class="language-R">intersect(x, y)
+  返回既在 x 表，又在 y 表中的观测。
+union(x, y)
+  返回 x 表或 y 表中的唯一观测。
+setdiff(x, y)
+  返回在 x 表，但不在 y 表中的观测。
+</code></pre>
+
+<h2 id="10-使用stringr处理字符串">10 使用stringr处理字符串</h2>
+
+<pre><code class="language-R"># 如果想要在字符串中包含一个单引号或双引号，可以使用 \ 对其进行“转义”
+
+double_quote &lt;- &quot;\&quot;&quot; # or '&quot;'
+single_quote &lt;- '\'' # or &quot;'&quot;
+</code></pre>
+
+<pre><code class="language-R"># 字符串长度
+str_length()
+
+# 字符串组合
+
+str_c(&quot;x&quot;, &quot;y&quot;, sep = &quot;, &quot;)
+
+x &lt;- c(&quot;abc&quot;, NA)
+str_c(&quot;|-&quot;, x, &quot;-|&quot;)
+#&gt; [1] &quot;|-abc-|&quot; NA
+str_c(&quot;|-&quot;, str_replace_na(x), &quot;-|&quot;)
+#&gt; [1] &quot;|-abc-|&quot; &quot;|-NA-|
+
+
+str_c(c(&quot;x&quot;, &quot;y&quot;, &quot;z&quot;), collapse = &quot;, &quot;)
+
+# 字符串取子集
+
+x &lt;- c(&quot;Apple&quot;, &quot;Banana&quot;, &quot;Pear&quot;)
+str_sub(x, 1, 3)
+
+#&gt; [1] &quot;App&quot; &quot;Ban&quot; &quot;Pea&quot;
+
+# 区域设置
+
+x &lt;- c(&quot;apple&quot;, &quot;eggplant&quot;, &quot;banana&quot;)
+str_sort(x, locale = &quot;en&quot;) # 英语
+#&gt; [1] &quot;apple&quot; &quot;banana&quot; &quot;eggplant&quot;
+str_sort(x, locale = &quot;haw&quot;) # 夏威夷语
+#&gt; [1] &quot;apple&quot; &quot;eggplant&quot; &quot;banana&quot;
+</code></pre>
+
+<p>使用正则式进行匹配</p>
+
+<pre><code class="language-R"> 
+ 
+
+
+要想建立正则表示式，我们需要使用\\
+dot &lt;- &quot;\\.&quot;
+# 实际上表达式本身只包含一个\：
+writeLines(dot)
+#&gt; \.
+# 这个表达式告诉R搜索一个.
+str_view(c(&quot;abc&quot;, &quot;a.c&quot;, &quot;bef&quot;), &quot;a\\.c&quot;)
+
+
+只需要记住传入字符串的两个\ 等于正则表达式的一个\即可 
+
+传入字符串： \\\\
+实际正则表达式： \\
+
+传入字符串： \\.
+实际正则表达式： \.  (查找符合一个点)
+
+
+^
+$
+\d
+\s
+? 0/1
++ &gt;=1
+* 0 &gt;1
+
+括号还可以定义“分组”，你可以通过回溯引用（如 \1、 \2 等）来引用这些分组。例如，以下的正则表达式可以找出名称中有重复的一对字母的所有水果：
+str_view(fruit, &quot;(..)\\1&quot;, match = TRUE)
+</code></pre>
+
+<p>匹配检测</p>
+
+<pre><code class="language-R">x &lt;- c(&quot;apple&quot;, &quot;banana&quot;, &quot;pear&quot;)
+str_detect(x, &quot;e&quot;)
+#&gt; [1] TRUE FALSE TRUE
+
+如果正则表达式过于复杂，则应该将其分解为几个更小的子表达式，将每个子表达式的匹配结果赋给一个变量，并使用逻辑运算组合起来。
+
+
+words[str_detect(words, &quot;x$&quot;)]
+#&gt; [1] &quot;box&quot; &quot;sex&quot; &quot;six&quot; &quot;tax&quot;
+str_subset(words, &quot;x$&quot;)
+#&gt; [1] &quot;box&quot; &quot;sex&quot; &quot;six&quot; &quot;tax&quot;
+
+# 结合数据框操作
+df &lt;- tibble(
+word = words,
+i = seq_along(word)
+)
+df %&gt;%
+filter(str_detect(words, &quot;x$&quot;))
+
+# str_count
+x &lt;- c(&quot;apple&quot;, &quot;banana&quot;, &quot;pear&quot;)
+str_count(x, &quot;a&quot;)
+#&gt; [1] 1 3 1
+</code></pre>
+
+<p>提取匹配内容</p>
+
+<pre><code class="language-R">colors &lt;- c(
+&quot;red&quot;, &quot;orange&quot;, &quot;yellow&quot;, &quot;green&quot;, &quot;blue&quot;, &quot;purple&quot;
+)
+color_match &lt;- str_c(colors, collapse = &quot;|&quot;)
+color_match
+#&gt; [1] &quot;red|orange|yellow|green|blue|purple&quot;
+
+has_color &lt;- str_subset(sentences, color_match)
+matches &lt;- str_extract(has_color, color_match)
+head(matches)
+#&gt; [1] &quot;blue&quot; &quot;blue&quot; &quot;red&quot; &quot;red&quot; &quot;red&quot; &quot;blue&quot;
+
+str_extract() 只提取第一个匹配
+
+str_view_all(more, color_match)
+
+str_extract_all() 函数，它会返回一个列表：
+
+str_extract_all(more, color_match, simplify = TRUE)
+#&gt; [,1] [,2]
+#&gt; [1,] &quot;blue&quot; &quot;red&quot;
+#&gt; [2,] &quot;green&quot; &quot;red&quot;
+#&gt; [3,] &quot;orange&quot; &quot;red&quot;
+x &lt;- c(&quot;a&quot;, &quot;a b&quot;, &quot;a b c&quot;)
+str_extract_all(x, &quot;[a-z]&quot;, simplify = TRUE)
+#&gt; [,1] [,2] [,3]
+#&gt; [1,] &quot;a&quot; &quot;&quot; &quot;&quot;
+#&gt; [2,] &quot;a&quot; &quot;b&quot; &quot;&quot;
+#&gt; [3,] &quot;a&quot; &quot;b&quot; &quot;c&quot;
+
+str_replace() 和 str_replace_all() 函数可以使用新字符串替换匹配内容。最简单的应用
+是使用固定字符串替换匹配内容：
+
+str_split
+
+</code></pre>
+
+<p>其他应用</p>
+
+<pre><code class="language-R">apropos() 函数可以在全局环境空间中搜索所有可用对象。
+
+dir() 函数可以列出一个目录下的所有文件。 dir() 函数的 patten 参数可以是一个正则表达式，此时它只返回与这个模式相匹配的文件名。
+</code></pre>
+
+<p>stringi包</p>
+
+<h2 id="11-使用forcats处理因子">11 使用forcats处理因子</h2>
+
+<pre><code>有时你会想让因子的顺序与初始数据的顺序保持一致。在创建因子时，将水平设置为
+unique(x)，或者在创建因子后再对其使用 fct_inorder() 函数，就可以达到这个目的。
+
+levels()
+</code></pre>
+
+<p>修改因子水平</p>
+
+<pre><code class="language-R">gss_cat %&gt;%
+mutate(partyid = fct_recode(partyid,
+&quot;Republican, strong&quot; = &quot;Strong republican&quot;,
+&quot;Republican, weak&quot; = &quot;Not str republican&quot;,
+&quot;Independent, near rep&quot; = &quot;Ind,near rep&quot;,
+&quot;Independent, near dem&quot; = &quot;Ind,near dem&quot;,
+&quot;Democrat, weak&quot; = &quot;Not str democrat&quot;,
+&quot;Democrat, strong&quot; = &quot;Strong democrat&quot;
+)) %&gt;%
+count(partyid)
+
+fct_recode() 会让没有明确提及的水平保持原样，如果不小心修改了一个不存在的水平，那么它也会给出警告。你可以将多个原水平赋给同一个新水平，这样就可以合并原来的分类。
+
+
+如果想要合并多个水平，那么可以使用 fct_recode() 函数的变体 fct_collapse() 函数。对于每个新水平，你都可以提供一个包含原水平的向量：
+
+
+gss_cat %&gt;%
+mutate(partyid = fct_collapse(partyid,
+other = c(&quot;No answer&quot;, &quot;Don't know&quot;, &quot;Other party&quot;),
+rep = c(&quot;Strong republican&quot;, &quot;Not str republican&quot;),
+ind = c(&quot;Ind,near rep&quot;, &quot;Independent&quot;, &quot;Ind,near dem&quot;),
+dem = c(&quot;Not str democrat&quot;, &quot;Strong democrat&quot;)
+)) %&gt;%
+count(partyid)
+</code></pre>
+
+<h2 id="12-使用lubridate处理日期和时间">12 使用lubridate处理日期和时间</h2>
+
+<p>表示日期或时间的数据有 3 种类型。
+• 日期：在 tibble 中显示为 <date>。
+• 时间：一天中的某个时刻，在 tibble 中显示为 <time>。
+• 日期时间：可以唯一标识某个时刻（通常精确到秒）的日期加时间，在 tibble 中显示为<dttm>。而这种类型在 R 语言的其他地方称为 POSIXct，但我们认为这个名称不是非常合适。</p>
+
+<p>创建日期或时间</p>
+
+<p>• 通过字符串创建。</p>
+
+<pre><code class="language-R">ymd(&quot;2017-01-31&quot;)
+#&gt; [1] &quot;2017-01-31&quot;
+mdy(&quot;January 31st, 2017&quot;)
+#&gt; [1] &quot;2017-01-31&quot;
+dmy(&quot;31-Jan-2017&quot;)
+#&gt; [1] &quot;2017-01-31&quot;
+
+ymd() 和类似的其他函数可以创建日期。要想创建日期时间型数据，可以在后面加一个下
+划线，以及 h、 m 和 s 之中的一个或多个字母，这样就可以得到解析日期时间的函数了：
+ymd_hms(&quot;2017-01-31 20:11:59&quot;)
+#&gt; [1] &quot;2017-01-31 20:11:59 UTC&quot;
+mdy_hm(&quot;01/31/2017 08:01&quot;)
+#&gt; [1] &quot;2017-01-31 08:01:00 UTC&quot;
+
+通过添加一个时区参数，你可以将一个日期强制转换为日期时间：
+ymd(20170131, tz = &quot;UTC&quot;)
+#&gt; [1] &quot;2017-01-31 UTC
+</code></pre>
+
+<p>• 通过日期时间的各个成分创建。</p>
+
+<pre><code class="language-R">flights %&gt;%
+select(year, month, day, hour, minute) %&gt;%
+mutate(
+departure = make_datetime(year, month, day, hour, minute)
+)
+
+
+
+
+当将日期时间型数据作为数值使用时（比如在直方图中）， 1 表示 1 秒，因此分箱宽度 86 400 才能够表示 1 天。对于日期型数据， 1 则表示 1 天。
+</code></pre>
+
+<p>• 通过现有的日期时间对象创建。</p>
+
+<pre><code class="language-R">as_datetime(today())
+#&gt; [1] &quot;2016-10-10 UTC&quot;
+as_date(now())
+#&gt; [1] &quot;2016-10-10
+
+
+有时我们会使用“Unix 时间戳”（即 1970-01-01）的偏移量来表示日期时间。如果偏移量单位是秒，那么就使用 as_datetime() 函数来转换；如果偏移量单位是天，则使用 as_date() 函数来转换：
+as_datetime(60 * 60 * 10)
+#&gt; [1] &quot;1970-01-01 10:00:00 UTC&quot;
+as_date(365 * 10 + 2)
+#&gt; [1] &quot;1980-01-01&quot;
+</code></pre>
+
+<p>获取成分</p>
+
+<pre><code class="language-R">可以使用以下访问器函数： year()、 month()、 mday()
+（一个月中的第几天）、 yday()（一年中的第几天）、 wday()（一周中的第几天）、 hour()、minute() 和 second()
+</code></pre>
+
+<p>设置成分</p>
+
+<pre><code class="language-R">(datetime &lt;- ymd_hms(&quot;2016-07-08 12:34:56&quot;))
+#&gt; [1] &quot;2016-07-08 12:34:56 UTC&quot;
+year(datetime) &lt;- 2020
+datetime
+#&gt; [1] &quot;2020-07-08 12:34:56 UTC&quot;
+month(datetime) &lt;- 01
+datetime
+#&gt; [1] &quot;2020-01-08 12:34:56 UTC&quot;
+hour(datetime) &lt;- hour(datetime) + 1
+
+update(datetime, year = 2020, month = 2, mday = 2, hour = 2)
+#&gt; [1] &quot;2020-02-02 02:34:56 UTC&quot;
+
+
+flights_dt %&gt;%
+mutate(dep_hour = update(dep_time, yday = 1)) %&gt;%
+ggplot(aes(dep_hour)) +
+geom_freqpoly(binwidth = 300)
+
+你可以使用 update() 函数来显示这一年中所有航班的出发时间在一天内的分布：这里用到的是一种技巧，将日期中较大的成分设定为常数是探索其中较小成分模式的一种有效手段。
+
+flights_dt %&gt;%
+mutate(dep_hour = update(dep_time, yday = 1)) %&gt;%
+ggplot(aes(dep_hour)) +
+geom_freqpoly(binwidth = 300)
+
+</code></pre>
+
+<p>舍入成分</p>
+
+<pre><code class="language-R">通过 floor_date()、 round_date() 和 ceiling_date()
+函数将日期舍入到临近的一个时间单位。
+
+flights_dt %&gt;%
+count(week = floor_date(dep_time, &quot;week&quot;)) %&gt;%
+ggplot(aes(week, n)) +
+geom_line()
+</code></pre>
+
+<p>时间间隔</p>
+
+<p>duration</p>
+
+<p>periods</p>
+
+<p>interval</p>
+
+<pre><code class="language-R"># Duration 以s为计量单位
+
+# Hadley多大了？
+h_age &lt;- today() - ymd(19791014)
+h_age
+#&gt; Time difference of 13511 days
+
+as.duration(h_age)
+#&gt; [1] &quot;1167350400s (~36.99 years)&quot;
+
+dseconds(15)
+#&gt; [1] &quot;15s&quot;
+dminutes(10)
+#&gt; [1] &quot;600s (~10 minutes)&quot;
+
+dhours(c(12, 24))
+#&gt; [1] &quot;43200s (~12 hours)&quot; &quot;86400s (~1 days)&quot;
+ddays(0:5)
+#&gt; [1] &quot;0s&quot; &quot;86400s (~1 days)&quot;
+#&gt; [3] &quot;172800s (~2 days)&quot; &quot;259200s (~3 days)&quot;
+#&gt; [5] &quot;345600s (~4 days)&quot; &quot;432000s (~5 days)&quot;
+dweeks(3)
+#&gt; [1] &quot;1814400s (~3 weeks)&quot;
+dyears(1)
+#&gt; [1] &quot;31536000s (~52.14 weeks)&quot;
+</code></pre>
+
+<pre><code class="language-R"># Periods 时间间隔，但它不以秒为单位；相反，它使用“人工”时间，比如日和月。这使得它们使用起来更加直观：
+
+seconds(15)
+#&gt; [1] &quot;15S&quot;
+minutes(10)
+#&gt; [1] &quot;10M 0S&quot;
+hours(c(12, 24))
+#&gt; [1] &quot;12H 0M 0S&quot; &quot;24H 0M 0S&quot;
+days(7)
+#&gt; [1] &quot;7d 0H 0M 0S&quot;
+months(1:6)
+#&gt; [1] &quot;1m 0d 0H 0M 0S&quot; &quot;2m 0d 0H 0M 0S&quot; &quot;3m 0d 0H 0M 0S&quot;
+#&gt; [4] &quot;4m 0d 0H 0M 0S&quot; &quot;5m 0d 0H 0M 0S&quot; &quot;6m 0d 0H 0M 0S&quot;
+weeks(3)
+#&gt; [1] &quot;21d 0H 0M 0S&quot;
+years(1)
+#&gt; [1] &quot;1y 0m 0d 0H 0M 0S&quot;
+
+# 闰年
+ymd(&quot;2016-01-01&quot;) + dyears(1)
+#&gt; [1] &quot;2016-12-31&quot;
+ymd(&quot;2016-01-01&quot;) + years(1)
+#&gt; [1] &quot;2017-01-01&quot;
+</code></pre>
+
+<p>区间</p>
+
+<pre><code class="language-R">区间。区间是带有起点的时期(periods)，这使得其非常精确，你可以确切地知道它的长度：
+</code></pre>
+
+<p>时区</p>
+
+<pre><code>Sys.timezone()
+#&gt; [1] &quot;America/Los_Angeles&quot;
+</code></pre>
+
+<h2 id="第三部分-编程篇">第三部分 <strong>编程篇</strong></h2>
+
+<p>• 第 13 章将深入介绍管道操作，即 %&gt;%，你将学习更多关于管道操作的工作原理和替代方式，以及不适合使用管道的情形。
+• 复制粘贴确实功能强大，但这种操作不应该超过两次。代码中的重复内容是非常危险的，因为这样很容易导致错误和不一致。第 14 章会介绍如何编写函数，这是重复使用代码的一种方式，它可以让你提取出重复代码，然后轻松地进行重用。
+• 当开始编写功能更强大的函数时，你需要深刻理解 R 的数据结构，这就是第 15 章的内容。你必须掌握 4 种常用的原子向量，以及以此为基础构建的 3 种重要 S3 类，并理解列表和数据框背后的奥秘。
+• 函数可以提取出重复代码，但你经常需要对不同的输入重复相同的操作。你需要可以多次执行相同操作的迭代工具，这些工具包括 for 循环和函数式编程，这就是第 16 章将要介绍的内容</p>
+
+<p>• 《R 语言入门与实践》， Garrett Grolemund 著。这是 R 编程语言的一本入门书，如果 R是你的第一门编程语言，那么从该书开始是非常合适的。该书的内容与上述各章非常相似，但使用了不同的风格和示例。如果你觉得这 4 章的内容过于简略，那么该书是一项重要补充。</p>
+
+<p>• Advanced R， Hadley Wickham 著。该书深入介绍了 R 作为编程语言的各种细节。如果你已有编程经验，那么该书非常适合你。如果你已经掌握了上述 4 章的内容，那么该书也非常适合你继续学习。该书有在线版本</p>
+
+<h2 id="13-使用magrittr进行管道操作">13 使用magrittr进行管道操作</h2>
+
+<pre><code class="language-R">library(magrittr) 
+</code></pre>
+
+<pre><code class="language-R"># 不使用管道的写法
+
+bop(
+scoop(
+hop(foo_foo, through = forest),
+up = field_mice
+),
+on = head
+)
+
+# 管道重写
+
+foo_foo %&gt;%
+hop(through = forest) %&gt;%
+scoop(up = field_mouse) %&gt;%
+bop(on = head)
+
+# 实际效果
+
+my_pipe &lt;- function(.) {
+. &lt;- hop(., through = forest)
+. &lt;- scoop(., up = field_mice)
+bop(., on = head)
+}
+my_pipe(foo_foo)
+</code></pre>
+
+<p>管道不能支持两类函数</p>
+
+<pre><code class="language-R">1.使用当前环境的函数。例如，assign() 函数会在当前环境中使用给定名称创建一个新变量
+ assign() get() 和 load() 函数
+
+要通过管道方式来使用 assign()，就必须显式地指定环境
+
+env &lt;- environment()
+&quot;x&quot; %&gt;% assign(100, envir = env)
+x
+#&gt; [1] 100
+
+
+2.使用惰性求值的函数。在R中，不会在函数调用前计算这种函数的参数，只在函数使用时才进行计算。管道依次计算每个参数，因此不能用在这种函数上。
+</code></pre>
+
+<p>管道是一种功能强大的工具，但并不是你的唯一选择，也不是“万能药”。管道最大的用武之地是重写一段较短的线性操作序列。对于以下几种情形，我们认为最好不要使用管道。</p>
+
+<p>• 操作步骤超过 10（参考值）个。这种情况下，应该使用有意义的变量来保存中间结果。这样会使得调试更加容易，因为你更容易检查中间结果；还可以使得代码更容易理解，因为有意义的变量名称可以帮助别人明白你的代码意图。</p>
+
+<p>• 有多个输入和输出。如果需要处理的不是一个基本对象，而是组合在一起的两个或多个对象，就不要使用管道。</p>
+
+<p>• 操作步骤构成一张具有复杂依赖关系的有向图。管道基本上是一种线性操作，如果使用它来表示复杂的关系，通常会使得代码混乱不清。</p>
+
+<p>其他</p>
+
+<pre><code class="language-R">1 为了解决这个问题，你可以使用“T”管道操作符 %T&gt;%。它的用法和 %&gt;% 差不多，只是它返回的是左侧项而不是右侧项。
+
+rnorm(100) %&gt;%
+matrix(ncol = 2) %&gt;%
+plot() %&gt;%
+str()
+#&gt; NULL
+
+rnorm(100) %&gt;%
+matrix(ncol = 2) %T&gt;%
+plot() %&gt;%
+str()
+
+2 如果使用的函数不是基于数据框的（也就是说，你必须传给这些函数一个独立的向量，不能传给它们数据框或基于数据框求值的表达式），那么你就会发现爆炸操作符 %$% 的妙处。它可以将数据框中的变量“炸出来”，让你显式地引用。当需要使用 R 基础包中的很多函数时，这个操作符特别奏效：
+
+mtcars %$%
+cor(disp, mpg)
+#&gt; [1] -0.848
+</code></pre>
+
+<h2 id="14-函数">14 函数</h2>
+
+<p>只要一段代码需要复制粘贴的次数超过两次（也就是说，同一段代码至少有 3 个副本），那么就应该考虑编写一个函数 。</p>
+
+<pre><code class="language-R">rescale01 &lt;- function(x) {
+rng &lt;- range(x, na.rm = TRUE)
+(x - rng[1]) / (rng[2] - rng[1])
+}
+
+rescale01(c(0, 5, 10))
+#&gt; [1] 0.0 0.5 1.0
+# RANGE 返回一个向量最大值和最小值
+
+这个示例非常好地体现了“不要重复自己”（do not repeat yourself， DRY）这一原则。
+</code></pre>
+
+<p>函数名应该是动词，而参数名应该是名词 。</p>
+
+<p>如果使用的是非常广义的动词，如 get、 compute、 calculate 或determine，此时改用名词通常是更好的选择。</p>
+
+<p>作者使用的是snake_case 命名法。</p>
+
+<p>一族<strong>功能相似</strong>的函数，那么一定要确保它们具有一致的名称和参数。可以使用一个<strong>通用前缀</strong>来表明它们之间的联系，这种方式比使用<strong>通用后缀</strong> 更好。</p>
+
+<p>Ctrl+Shift+R，对代码进行分节。</p>
+
+<p><strong>函数参数</strong></p>
+
+<p>函数的参数通常分为两大类：一类提供需要进行计算的数据，另一类控制计算过程的细节。</p>
+
+<p>注意，在调用函数时，应该在其中 = 的两端都加一个空格。逗号后面应该总是加一个空格，逗号前面则不要加空格（与英文写法相同）。使用空格可以使得函数的重要部分更易读：</p>
+
+<p>参数名称常用命名</p>
+
+<p>• x, y, z：向量。
+• w：权重向量。
+• df：数据框。
+• i, j：数值索引（通常用于表示行和列）。
+• n：长度或行的数量。
+• p：列的数量。</p>
+
+<p>检查参数值</p>
+
+<pre><code class="language-R">wt_mean &lt;- function(x, w) {
+if (length(x) != length(w)) {
+stop(&quot;`x` and `w` must be the same length&quot;, call. = FALSE)
+}
+sum(w * x) / sum(x)
+}
+
+
+比较好的一个折中方案是使用内置的 stopifnot() 函数
+stopifnot(is.logical(na.rm), length(na.rm) == 1)
+</code></pre>
+
+<p>R 中的参数求值的方式是惰性的，即直到需要参数时才会进行求值。</p>
+
+<pre><code class="language-R">第一个分支中的代码非常长，到达 else 语句前，你可能就已经记不清 condition了。解决这个问题的一种方法是将简单情形提前返回：
+
+f &lt;- function() {
+if (!x) {
+return(something_short)
+}
+</code></pre>
+
+<p>转换函数会传入一个明确的“基本”对象作为第一个参数，对这个对象进行处理后，再将其返回。例如，在 dplyr 中，这个关键的对象就是数据框。如果能够确定在自己的领域内应该使用哪种数据类型，那么你就可以让自己的函数支持管道操作了。</p>
+
+<p>副作用函数经常用来执行某种行为，比如绘图或保存文件，而不是转换对象。这些函数会“悄悄地”返回第一个参数，因此，默认情况下，第一个参数不显示在输出中，但仍然可以由管道操作使用。例如，以下这个简单函数会输出一个数据框中的缺失值的数量：</p>
+
+<pre><code class="language-R">show_missings &lt;- function(df) {
+n &lt;- sum(is.na(df))
+cat(&quot;Missing values: &quot;, n, &quot;\n&quot;, sep = &quot;&quot;)
+invisible(df)
+}
+</code></pre>
+
+<p>环境</p>
+
+<pre><code class="language-R">因为 R 使用称为词法定界的一种规则来搜索对象的值。因为 y 没有在函数中进行
+定义，所以 R 会在定义函数的环境中寻找 y：
+
+f &lt;- function(x) {
+x + y
+}
+</code></pre>
+
+<h2 id="15-向量">15 向量</h2>
+
+<p>• 原子向量，其共有 6 种类型： 逻辑型、 整型、 双精度型、 字符型、 复数型和原始型。整型和双精度型向量又统称为数值型向量。
+• 列表，有时又称为递归向量，因为列表中也可以包含其他列表。</p>
+
+<pre><code class="language-R">向量的两个关键属性
+
+• 类型。你可以使用 typeof() 函数来确定向量的类型：
+typeof(letters)
+#&gt; [1] &quot;character&quot;
+typeof(1:10)
+#&gt; [1] &quot;integer&quot;
+
+• 长度。你可以使用 length() 函数来确定向量的长度：
+x &lt;- list(&quot;a&quot;, &quot;b&quot;, 1:10)
+length(x)
+#&gt; [1] 3
+</code></pre>
+
+<pre><code class="language-R"># 整型与双精度型向量统称为数值型向量。 R 中默认数值是双精度型的。如果想要创建整型数值，可以在数字后面加一个 L：
+
+
+typeof(1)
+#&gt; [1] &quot;double&quot;
+typeof(1L)
+#&gt; [1] &quot;integer&quot;
+1.5L
+#&gt; [1]
+
+注意点
+
+1 应该将所有双精度数当成近似值
+2 整型数据有 1 个特殊值 NA，而双精度型数据则有 4 个特殊值： NA、 NaN、 Inf 和 -Inf。
+
+c(-1, 0, 1) / 0
+#&gt; [1] -Inf NaN Inf
+
+
+
+# 字符型向量
+
+R使用的是全局字符串池。这意味着每个唯一的字符串在内存中只保存一次
+
+
+
+# 缺失值  每种类型的原子向量都有自己的缺失值
+
+NA # 逻辑型
+#&gt; [1] NA
+NA_integer_ # 整型
+#&gt; [1] NA
+NA_real_ # 双精度型
+#&gt; [1] NA
+NA_character_ # 字符型
+#&gt; [1] NA
+</code></pre>
+
+<p>使用原子向量</p>
+
+<p>• 如何将一种原子向量转换为另一种，以及何时系统会自动转换。
+• 如何分辨出一个对象是哪种特定类型的向量。
+• 在处理长度不同的向量时，会发生什么情况。
+• 如何命名向量中的元素。
+• 如何提取出感兴趣的元素。</p>
+
+<p><strong>强制转换</strong></p>
+
+<p>调用 as.logical()、 as.integer()、 as.double() 或 as.character()
+这样的函数进行转换时，使用的就是显式强制转换。</p>
+
+<p>当在特殊的上下文环境中使用向量，而这个环境又要求使用特定类型的
+向量时，就会发生隐式强制转换。</p>
+
+<pre><code class="language-R">最重要的一种隐式强制转换：在数值环境中使用逻辑向量。TRUE 转换为 1， FALSE 转换为 0。
+
+x &lt;- sample(20, 100, replace = TRUE)
+y &lt;- x &gt; 10
+sum(y) # 大于10的数有多少个？
+#&gt; [1] 44
+mean(y) # 大于10的数的比例是多少？
+#&gt; [1] 0.44
+
+
+ c() 函数来创建包含多种类型元素的向量时，清楚如何进行类型转换也是非常
+重要的。这时总是会统一转换为最复杂的元素类型：
+typeof(c(TRUE, 1L))
+#&gt; [1] &quot;integer&quot;
+typeof(c(1L, 1.5))
+#&gt; [1] &quot;double&quot;
+typeof(c(1.5, &quot;a&quot;))
+#&gt; [1] &quot;character
+
+</code></pre>
+
+<p>检验函数</p>
+
+<pre><code class="language-R"># 使用purr包提供的is_*函数
+
+is_logical() 
+is_integer() x
+is_double() x
+is_numeric() x x
+is_character() x
+is_atomic() x x x x
+is_list() x
+is_vector()
+</code></pre>
+
+<p>向量取子集</p>
+
+<pre><code class="language-R">x &lt;- c(&quot;one&quot;, &quot;two&quot;, &quot;three&quot;, &quot;four&quot;, &quot;five&quot;)
+x[c(3, 2, 5)]
+#&gt; [1] &quot;three&quot; &quot;two&quot; &quot;five
+
+使用负整数取子集时，会丢弃相应位置的元素：
+x[c(-1, -3, -5)]
+#&gt; [1] &quot;two&quot; &quot;four
+
+使用逻辑向量取子集。这种方式可以提取出 TRUE 值对应的所有元素
+
+# x中的所有非缺失值
+x[!is.na(x)]
+#&gt; [1] 10 3 5 8 1
+# x中的所有偶数值（或缺失值）
+x[x %% 2 == 0]
+#&gt; [1] 10 NA 8 NA
+
+如果是命名向量，那么可以使用字符向量来取子集：
+x &lt;- c(abc = 1, def = 2, xyz = 5)
+x[c(&quot;xyz&quot;, &quot;def&quot;)]
+#&gt; xyz def
+#&gt; 5 2
+
+取子集的最简方式就是什么都不写： x[]，这样就会返回 x 中的全部元素。这种方式对于向量取子集没有什么用处，但对于矩阵（或其他高维数据结构）取子集则非常重要，因为这样可以取出所有的行或所有的列，只要将行或列保持为空即可。例如，如果 x 是二维的，那么 x[1, ] 可以选取出第 1 行和所有列， x[, -1] 则可以选取出所有行和除第1 列外的所有列.
+
+[ 有一个重要的变体 [[。 [[ 从来都是只提取单个元素，并丢弃名称。
+</code></pre>
+
+<p>递归向量（列表）</p>
+
+<pre><code class="language-R">在处理列表时， str() 函数是一个非常有用的工具，因为其重点关注列表结构，而不是列表内容：
+str(x)
+#&gt; List of 3
+#&gt; $ : num 1
+#&gt; $ : num 2
+#&gt; $ : num 3
+
+
+使用 [[ 从列表中提取单个元素。这种方式会从列表中删除一个层次等级
+str(a[[1]])
+#&gt; int [1:3] 1 2 3
+str(a[[4]])
+#&gt; List of 2
+#&gt; $ : num -1
+#&gt; $ : num -5
+
+a$a
+#&gt; [1] 1 2 3
+a[[&quot;a&quot;]]
+#&gt; [1] 1 2 3
+
+
+</code></pre>
+
+<p><img src="C:UsersThinkPadAppDataRoamingTyporatypora-user-images1584775020973.png" alt="1584775020973" /></p>
+
+<p>特性</p>
+
+<pre><code class="language-R">
+x &lt;- 1:10
+attr(x, &quot;greeting&quot;)
+#&gt; NULL
+attr(x, &quot;greeting&quot;) &lt;- &quot;Hi!&quot;
+attr(x, &quot;farewell&quot;) &lt;- &quot;Bye!&quot;
+attributes(x)
+#&gt; $greeting
+#&gt; [1] &quot;Hi!&quot;
+#&gt;
+#&gt; $farewell
+#&gt; [1] &quot;Bye!&quot;
+
+3种特别重要的特性可以用来实现 R 中的基础功能。
+• 名称：用于命名向量元素。
+• 维度：使得向量可以像矩阵或数组那样操作。
+• 类：用于实现面向对象的 S3 系统
+
+
+你可以使用 getS3method() 函数查看方法的特殊实现形式：
+getS3method(&quot;as.Date&quot;, &quot;default&quot;)
+#&gt; function (x, ...)
+#&gt; {
+#&gt; if (inherits(x, &quot;Date&quot;))
+#&gt; return(x)
+#&gt; if (is.logical(x) &amp;&amp; all(is.na(x)))
+#&gt; return(structure(as.numeric(x), class = &quot;Date&quot;))
+#&gt; stop(
+#&gt; gettextf(&quot;do not know how to convert '%s' to class %s&quot;,
+#&gt; deparse(substitute(x)), dQuote(&quot;Date&quot;)), domain = NA)
+#&gt; }
+#&gt; &lt;bytecode: 0x7fa61dd47e78&gt;
+#&gt; &lt;environment: namespace:base&gt;
+getS3method(&quot;as.Date&quot;, &quot;numeric&quot;)
+#&gt; function (x, origin, ...)
+#&gt; {
+#&gt; if (missing(origin))
+#&gt; stop(&quot;'origin' must be supplied&quot;)
+#&gt; as.Date(origin, ...) + x
+#&gt; }
+#&gt; &lt;bytecode: 0x7fa61dd463b8&gt;
+#&gt; &lt;environment: namespace:base&gt;
+</code></pre>
+
+<p>扩展向量</p>
+
+<pre><code class="language-R">因子是在整型向量的基础上构建的，添加了水平特性
+
+x &lt;- factor(c(&quot;ab&quot;, &quot;cd&quot;, &quot;ab&quot;), levels = c(&quot;ab&quot;, &quot;cd&quot;, &quot;ef&quot;))
+typeof(x)
+#&gt; [1] &quot;integer&quot;
+attributes(x)
+#&gt; $levels
+#&gt; [1] &quot;ab&quot; &quot;cd&quot; &quot;ef&quot;
+#&gt;
+#&gt; $class
+#&gt; [1] &quot;factor&quot;
+
+日期时间
+Date,POSIXct,POSIXlt
+x &lt;- as.Date(&quot;1971-01-01&quot;)
+unclass(x)
+#&gt; [1] 365
+typeof(x)
+#&gt; [1] &quot;double&quot;
+attributes(x)
+#&gt; $class
+#&gt; [1] &quot;Date&quot;
+</code></pre>
+
+<p>tibble</p>
+
+<pre><code class="language-R">tb &lt;- tibble::tibble(x = 1:5, y = 5:1)
+typeof(tb)
+#&gt; [1] &quot;list&quot;
+attributes(tb)
+#&gt; $names
+#&gt; [1] &quot;x&quot; &quot;y&quot;
+#&gt;
+#&gt; $class
+#&gt; [1] &quot;tbl_df&quot; &quot;tbl&quot; &quot;data.frame&quot;
+</code></pre>
+
+<h2 id="16-使用purrr实现迭代">16 使用purrr实现迭代</h2>
+
+<p>for 循环结构</p>
+
+<p><strong>输出</strong>：必须为输出结果分配足够的空间。这对循环效率非常重要，如果在每次迭代中都使用 c() 来保存循环的结果，那么 for 循环的速度就会特别慢。</p>
+
+<p>创建给定长度的空向量的一般方法是使用 vector() 函数，该函数有两个参数：向量类型（&rdquo;logical&rdquo;、 &ldquo;integer&rdquo;、 &ldquo;double&rdquo;、 &ldquo;character&rdquo; 等）和向量的长度。</p>
+
+<p><strong>序列</strong>：</p>
+
+<p>确定了使用哪些值来进行循环 ，seq_along() 函数的作用，它与我们熟悉的 1:length(l) 的作用基本相同，但最重要的区别是更加安全。</p>
+
+<pre><code class="language-R">output &lt;- vector(&quot;double&quot;, ncol(df)) # 1. 输出
+for (i in seq_along(df)) { # 2. 序列
+output[[i]] &lt;- median(df[[i]]) # 3. 循环体
+}
+output
+</code></pre>
+
+<p>for循环的变体</p>
+
+<p>在基础 for 循环之上有 4 种变体。
+• 修改现有对象，而不是创建新对象。
+• 使用名称或值进行迭代，而不是使用索引。
+• 处理未知长度的输出。
+• 处理未知长度的序列。</p>
+
+<pre><code class="language-R"># 修改现有对象
+
+df &lt;- tibble(
+a = rnorm(10),
+b = rnorm(10),
+c = rnorm(10),
+d = rnorm(10)
+)
+
+rescale01 &lt;- function(x) {
+rng &lt;- range(x, na.rm = TRUE)
+(x - rng[1]) / (rng[2] - rng[1])
+}
+
+for (i in seq_along(df)) {
+df[[i]] &lt;- rescale01(df[[i]])
+}
+
+# 改变循环模式
+- for (i in seq_along(xs))
+    
+- 使用元素进行循环： for (x in xs)
+
+-使用名称进行循环： for (nm in names(xs))。这种方式会给出一个名称，你可以使用这个名称和 x[[nm]] 来访问元素的值。如果想要在图表标题或文件名中使用元素名称，那么你就应该使用这种方式
+
+# 未知的输出长度
+将结果保存在一个列表中，循环结束后再组合成一个向量，不要不断添加向量内容
+
+out &lt;- vector(&quot;list&quot;, length(means))
+for (i in seq_along(means)) {
+n &lt;- sample(100, 1)
+out[[i]] &lt;- rnorm(n, means[[i]])
+}
+str(out)
+#&gt; List of 3
+#&gt; $ : num [1:83] 0.367 1.13 -0.941 0.218 1.415 ...
+#&gt; $ : num [1:21] -0.485 -0.425 2.937 1.688 1.324 ...
+#&gt; $ : num [1:40] 2.34 1.59 2.93 3.84 1.3 ...
+str(unlist(out))
+#&gt; num [1:144] 0.367 1.13 -0.941 0.218 1.415 ...
+
+• 你或许会生成一个很长的字符串。不要使用 paste() 函数将每次迭代的结果与上一次连接起来，而应该将每次迭代结果保存在字符向量中，然后再使用 paste(output,collapse = &quot;&quot;) 将这个字符向量组合成一个字符串。
+• 你或许会生成一个很大的数据框。不要在每次迭代中依次使用 rbind() 函数，而应该将每次迭代结果保存在列表中，再使用 dplyr::bind_rows(output) 将结果组合成数据框
+
+# 未知的序列长度
+不知道输入序列的长度,此时可以使用while循环。while 循环最常用于模拟
+
+flip &lt;- function() sample(c(&quot;T&quot;, &quot;H&quot;), 1)
+flips &lt;- 0
+nheads &lt;- 0
+while (nheads &lt; 3) {
+if (flip() == &quot;H&quot;) {
+nheads &lt;- nheads + 1
+} else {
+nheads &lt;- 0
+}
+flips &lt;- flips + 1
+}
+flips
+#&gt; [1] 3
+</code></pre>
+
+<p>for循环与函数式编程</p>
+
+<pre><code class="language-R">col_summary &lt;- function(df, fun) {
+out &lt;- vector(&quot;double&quot;, length(df))
+for (i in seq_along(df)) {
+out[i] &lt;- fun(df[[i]])
+}
+out
+}
+</code></pre>
+
+<p>将函数作为参数传入另一个函数的这种做法是一种非常强大的功能，它是促使 R 成为函数式编程语言的因素之一。</p>
+
+<p>映射函数</p>
+
+<p>使用 map() 函数的主要优势不是速度，而是简洁：它们可以让你的代码更易编写，也更易读 。每个函数都使用一个向量作为输入，并对向量的每个元素应用一个函数，然后返回和输入向量同样长度（同样名称）的一个新向量。向量的类型由映射函数的后缀决定 。</p>
+
+<p>• map() 用于输出列表；
+• map_lgl() 用于输出逻辑型向量；
+• map_int() 用于输出整型向量；
+• map_dbl() 用于输出双精度型向量
+• map_chr() 用于输出字符型向量。</p>
+
+<pre><code class="language-R">因为 R 中创建匿名函数的语法比较繁琐，所以 purrr 提供了一种更方便的快捷方式——单侧公式：
+models &lt;- mtcars %&gt;%
+split(.$cyl) %&gt;%
+map(~lm(mpg ~ wt, data = .))
+
+ . 作为一个代词：它表示当前列表元素（与 for 循环中用 i 表示
+当前索引是一样的）。
+
+因为提取命名成分的这种操作非常普遍，所以 purrr 提供了一种更为简洁的快捷方式：使用字符串。
+models %&gt;%
+map(summary) %&gt;%
+map_dbl(&quot;r.squared&quot;)
+#&gt; 4 6 8
+#&gt; 0.509 0.465 0.423
+你还可以使用整数按照位置来选取元素：
+x &lt;- list(list(1, 2, 3), list(4, 5, 6), list(7, 8, 9))
+x %&gt;% map_dbl(2)
+#&gt; [1] 2 5 8
+</code></pre>
+
+<p>与基础包的比较</p>
+
+<pre><code>lapply() 函数与 map 函数的功能基本相同，差别在于 map() 函数与 purrr 包中的其他函数是一致的，而且可以对 .f 使用快捷方式
+
+R 基础包中的 sapply() 函数是对 lapply() 的包装，可以自动简化输出。这对交互工作是有用的，但作为函数则是有问题的，因为你不知道会得到什么样的输出
+
+vapply()函数是sapply()的一种安全替代方式，因为前者可以提供额外的参数来定义类型。
+vapply() 的唯一缺点是输入量较大： vapply(df, is.numeric, logical(1)) 等价于 map_lgl(df, is.numeric)。 vapply() 胜于 purrr 中的映射函数的一点是，它可以生成矩阵，而映射函数只能生成向量。
+
+</code></pre>
+
+<p>操作失败的处理</p>
+
+<pre><code>当函数成功运行时， result 元素中包含原始结果， error 元素的值是 NULL；当函数运行失败时， result 元素的值是 NULL， error 元素中包含错误对象
+
+safely() 也可以与 map() 函数共同使用
+
+purrr::transpose() 函数轻松完成这个任务，如果将以上结果转换为两个列表，一个列表包含所有错误对象，另一个列表包含所有原始结果
+
+safe_log &lt;- safely(log)
+str(safe_log(10))
+#&gt; List of 2
+#&gt; $ result: num 2.3
+#&gt; $ error : NULL
+str(safe_log(&quot;a&quot;))
+#&gt; List of 2
+#&gt; $ result: NULL
+#&gt; $ error :List of 2
+#&gt; ..$ message: chr &quot;non-numeric argument to mathematical ...&quot;
+#&gt; ..$ call : language .f(...)
+#&gt; ..- attr(*, &quot;class&quot;)= chr [1:3] &quot;simpleError&quot; &quot;error&quot; ...
+</code></pre>
+
+<p>多参数映射</p>
+
+<p>map2</p>
+
+<pre><code class="language-R">应该使用 map2() 函数，它可以对两个向量进行同步迭代
+
+mu &lt;- list(5, 10, -3)
+sigma &lt;- list(1, 5, 10)
+n &lt;- list(1, 3, 5)
+map2(mu, sigma, rnorm, n = 5) %&gt;% str()
+#&gt; List of 3
+#&gt; $ : num [1:5] 4.78 5.59 4.93 4.3 4.47
+#&gt; $ : num [1:5] 10.85 10.57 6.02 8.82 15.93
+#&gt; $ : num [1:5] -1.12 7.39 -7.5 -10.09 -2.7
+
+
+# map2()函数也是对for循环的包装
+
+map2 &lt;- function(x, y, f, ...) {
+out &lt;- vector(&quot;list&quot;, length(x))
+for (i in seq_along(x)) {
+out[[i]] &lt;- f(x[[i]], y[[i]], ...)
+}
+out
+}
+
+# pmap
+如果没有为列表的元素命名，那么 pmap() 在调用函数时就会按照位置匹配。这样做比较容易出错，而且会让代码的可读性变差，因此最好使用命名参数：
+
+mu &lt;- list(5, 10, -3)
+sigma &lt;- list(1, 5, 10)
+n &lt;- list(1, 3, 5)
+
+args2 &lt;- list(mean = mu, sd = sigma, n = n)
+args2 %&gt;%
+pmap(rnorm) %&gt;%
+str()
+
+参数可以保存在数据框中
+
+params &lt;- tribble(
+~mean, ~sd, ~n,
+5, 1, 1,
+10, 5, 3,
+-3, 10, 5
+)
+params %&gt;%
+pmap(rnorm)
+
+
+# 函数不同，参数也不同
+
+f &lt;- c(&quot;runif&quot;, &quot;rnorm&quot;, &quot;rpois&quot;)
+param &lt;- list(
+list(min = -1, max = 1),
+list(sd = 5),
+list(lambda = 10)
+)
+
+invoke_map(f, param, n = 5) %&gt;% str()
+#&gt; List of 3
+#&gt; $ : num [1:5] 0.762 0.36 -0.714 0.531 0.254
+#&gt; $ : num [1:5] 3.07 -3.09 1.1 5.64 9.07
+#&gt; $ : int [1:5] 9 14 8 9 7
+
+
+
+sim &lt;- tribble(
+~f, ~params,
+&quot;runif&quot;, list(min = -1, max = 1),
+&quot;rnorm&quot;, list(sd = 5),
+&quot;rpois&quot;, list(lambda = 10)
+)
+sim %&gt;%
+mutate(sim = invoke_map(f, params, n = 10))
+</code></pre>
+
+<p>游走函数</p>
+
+<p>如果调用函数的目的是利用其副作用，而不是返回值时，那么就应该使用游走函数，而不是映射函数。</p>
+
+<pre><code class="language-R">walk()、 walk2() 和 pwalk() 都会隐式地返回 .x，即第一个参数。这使得它们非常适用于管道操作。
+
+
+x &lt;- list(1, &quot;a&quot;, 3)
+x %&gt;%
+walk(print)
+#&gt; [1] 1
+#&gt; [1] &quot;a&quot;
+#&gt; [1] 3
+
+
+
+####
+library(ggplot2)
+plots &lt;- mtcars %&gt;%
+split(.$cyl) %&gt;%
+map(~ggplot(., aes(mpg, wt)) + geom_point())
+paths &lt;- stringr::str_c(names(plots), &quot;.pdf&quot;)
+pwalk(list(paths, plots), ggsave, path = tempdir())
+</code></pre>
+
+<p>for循环的其他模式</p>
+
+<pre><code class="language-R"># 预测函数
+
+keep() 和 discard() 函数可以分别保留输入中预测值为 TRUE 和 FALSE 的元素：
+
+detect() 函数可以找出预测值为真的第一个元素， detect_index() 函数则可以返回这个元
+素的位置：
+
+head_while() 和 tail_while() 分别从向量的开头和结尾找出预测值为真的元素：
+
+x %&gt;%
+head_while(~ . &gt; 5)
+#&gt; [1] 8 7
+x %&gt;%
+tail_while(~ . &gt; 5)
+#&gt; integer(0)
+
+
+
+# 规约与累计
+
+dfs &lt;- list(
+age = tibble(name = &quot;John&quot;, age = 30),
+sex = tibble(name = c(&quot;John&quot;, &quot;Mary&quot;), sex = c(&quot;M&quot;, &quot;F&quot;)),
+trt = tibble(name = &quot;Mary&quot;, treatment = &quot;A&quot;)
+)
+dfs %&gt;% reduce(full_join)
+
+reduce() 函数使用一个“二元”函数（即具有两个基本输入的函数），将其不断应用一个列表，直到最后只剩下一个元素为止
+
+
+累计函数与归约函数很相似，但前者会保留所有中间结果。你可以使用它来实现累计求
+和：
+x &lt;- sample(10)
+x
+#&gt; [1] 6 9 8 5 2 4 7 1 10 3
+x %&gt;% accumulate(`+`)
+#&gt; [1] 6 15 23 28 30 34 41 42 52 55
+
+
+# 这个用cumsum函数也可以
+</code></pre>
+
+<h2 id="第四部分-模型">第四部分 模型</h2>
+
+<p>模型的作用是提供一个简单的、低维度的数据集摘要。理想情况下，模型可以捕获真正的“信号”（即由我们感兴趣的现象生成的模式），并忽略“噪声”（即我们不感兴趣的随机变动）。这里我们只介绍“预测”模型，顾名思义，也就是能够生成预测的模型。我们不打算在本书中讨论另一类模型，即“数据发现”模型。这种模型的目标不是进行预测，而是帮助我们发现数据中有趣的关系。（这两类模型有时分别称为监督式模型和非监督式模型，但我们认为这两个术语不是很有启发性。）</p>
+
+<p>如果想要严肃认真地进行验证性分析，一种方法是在进行分析前将数据分成 3 个部分。
+• 将 60% 的数据作为训练集，或称探索集。你可以对这部分数据进行任意操作，比如可视化，或者用数据拟合多个模型。
+• 将 20% 的数据作为查询集。你可以使用这部分数据来比较模型或者进行手动可视化，但不能将其用于自动化过程。
+• 将 20% 的数据留作测试集。这部分数据只能使用一次，用于测试最终模型。</p>
+
+<h2 id="17-使用modelr实现基础模型">17 使用modelr实现基础模型</h2>
+
+<pre><code class="language-R">library(tidyverse)
+library(modelr)
+options(na.action = na.warn)
+</code></pre>
+
+<h2 id="18-模型构建">18 模型构建</h2>
+
+<p>• Statistical Modeling: A Fresh Approach， Danny Kaplan 著。这本书既对建模进行了简单明了的介绍，也可以帮助你建立直觉、掌握数学工具和 R 语言技能。这本书不是那种传
+统的“统计学入门”教材，而是提供了与数据科学相关的最新内容。
+• An Introduction to Statistical Learning， Gareth James、 Daniela Witten、 Trevor Hastie 及Robert Tibshirani 著（有免费的在线版）。这本书介绍了称为“统计学习”的一整套现代建模技术。如果想要加深对模型的数学理解，可以阅读 Trevor Hastie、 Robert Tibshirani和 Jerome Friedman 的经典著作 Elements of Statistical Learning（有免费的在线版）。
+• Applied Predictive Modeling， Max Kuhn 及 Kjell Johnson 著。这本书是对 caret 包的重要补充，提供了多种实用工具，可以帮助你解决实际工作的预测性建模难题。</p>
+
+<h2 id="19-使用purrr和broom处理多个模型">19 使用purrr和broom处理多个模型</h2>
+
+<p>之后再看</p>
+
+<h2 id="第五部分-沟通">第五部分 沟通</h2>
+
+<h2 id="20-r-markdown">20 R Markdown</h2>
+
+<pre><code class="language-R">---
+title: &quot;Diamond sizes&quot;
+date: 2016-08-25
+output: html_document
+---
+```{r setup, include = FALSE}
+library(ggplot2)
+library(dplyr)
+smaller &lt;- diamonds %&gt;%
+filter(carat &lt;= 2.5)
+```
+We have data about `r nrow(diamonds)` diamonds. Only
+`r nrow(diamonds) - nrow(smaller)` are larger than
+2.5 carats. The distribution of the remainder is shown
+below:
+```{r, echo = FALSE}
+smaller %&gt;%
+ggplot(aes(carat)) +
+geom_freqpoly(binwidth = 0.01)
+```
+</code></pre>
+
+<p>以下是最重要的一组选项，用来控制代码段是否可以执行，以及最终报告中包括哪些结果。</p>
+
+<p>• eval = FALSE 禁止对代码进行求值。（很明显，如果代码不能运行的话，就不能生成什么结果。）在显示示例代码或不通过每行注释禁用大段代码时，这个选项是非常有用的。</p>
+
+<p>• include = FALSE 可以运行代码，但不会在最终文档中显示代码和结果。如果不想让setup 代码出现在报告中，就可以使用这个选项。</p>
+
+<p>• echo = FALSE 禁止代码出现在最终报告中，但不会禁止结果。为不想看到 R 代码的人们编写报告时，就可以使用这个选项。</p>
+
+<p>• message = FALSE 或 warning = FALSE 可以防止消息或警告出现在最终报告中。</p>
+
+<p>• results = &lsquo;hide&rsquo; 可以隐藏文本输出； fig.show = &lsquo;hide&rsquo; 可以隐藏图形输出。</p>
+
+<p>• error = TRUE 在代码出现错误时仍然可以生成最终报告。在报告的最终版中，我们很少需要包括出错信息，但在调试 .Rmd 文件时，出错信息是非常有用的。如果使用 R 进行教学活动，并特意想要包括出错信息的话，这个选项是非常有用的。如果使用默认设置error = FALSE，那么即使只有一个错误，文档生成也会失败。</p>
+
+<pre><code class="language-R">内联代码
+
+`r nrow(diamonds)`
+</code></pre>
+
+<h2 id="21-使用ggplot2-进行图形化沟通">21 使用ggplot2 进行图形化沟通</h2>
+
+<p>修改标题、注释</p>
+
+<p>标度</p>
+
+<p>图例布局</p>
+
+<p>颜色</p>
+
+<p>缩放</p>
+
+<p>主题</p>
+
+<p>图片大小</p>
+
+<p>学习更多相关知识的最好去处绝对是 ggplot2 教材：《ggplot2：数据分析与图形艺术》。这本书更加深入地介绍了基础理论，而且使用了更多的示例来介绍如何组合多个图形以解决实际问题。遗憾的是，这本书没有免费的在线版本，但你可以在 <a href="https://github.com/hadley/ggplot2-book">https://github.com/hadley/ggplot2-book</a> 找到其源代码。</p>
+
+<p>另一个绝好资源是 ggplot2 扩展指南网站（<a href="http://www.ggplot2-exts.org/）。这个站点列举了很多">http://www.ggplot2-exts.org/）。这个站点列举了很多</a> ggplot2 扩展包，它们实现了新的几何对象和新的标度。如果想要做一些 ggplot2 难以实现的事情，不妨从这里开始。</p>
+
+<h2 id="22-r-markdown-输出类型">22 R Markdown 输出类型</h2>
+
+<h2 id="23-r-markdown-工作流">23 R Markdown 工作流</h2>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">Cai Meng</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2020-04-25
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/img/reward/wechat.jpg">
+        <span>微信打赏</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/img/reward/alipay.jpg">
+        <span>支付宝打赏</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/r/">R</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/even%E6%B7%BB%E5%8A%A0r%E8%AF%AD%E8%A8%80%E9%AB%98%E4%BA%AE%E5%8F%8Atitle%E6%98%BE%E7%A4%BA/">
+            <span class="next-text nav-default">even添加r语言高亮及title显示</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:caimeng@bjmu.edu.cn" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/laoshancai" class="iconfont icon-github" title="github"></a>
+  <a href="https://laoshancai.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019 - 
+    2021
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Cai Meng</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script
+ charset="UTF-8"
+ src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

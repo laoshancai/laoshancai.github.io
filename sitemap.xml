@@ -10,14 +10,49 @@
   
   <url>
     <loc>https://laoshancai.github.io/</loc>
-    <lastmod>2019-09-17T16:01:23+08:00</lastmod>
+    <lastmod>2020-04-25T23:54:11+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://laoshancai.github.io/categories/</loc>
-    <lastmod>2019-09-17T16:01:23+08:00</lastmod>
+    <lastmod>2020-04-25T23:54:11+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laoshancai.github.io/post/</loc>
+    <lastmod>2020-04-25T23:54:11+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laoshancai.github.io/tags/r/</loc>
+    <lastmod>2020-04-25T23:54:11+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laoshancai.github.io/post/r4ds/</loc>
+    <lastmod>2020-04-25T23:54:11+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laoshancai.github.io/tags/</loc>
+    <lastmod>2020-04-25T23:54:11+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://laoshancai.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2020-04-25T23:54:11+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -30,21 +65,7 @@
   </url>
   
   <url>
-    <loc>https://laoshancai.github.io/post/</loc>
-    <lastmod>2019-09-17T16:01:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://laoshancai.github.io/tags/syntax-highlighting/</loc>
-    <lastmod>2019-09-17T16:01:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://laoshancai.github.io/tags/</loc>
     <lastmod>2019-09-17T16:01:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
