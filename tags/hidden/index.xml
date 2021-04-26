@@ -6,10 +6,29 @@
     <description>Recent content in hidden on Cai&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 01 Jan 2018 16:01:23 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 30 Aug 2018 16:01:23 +0800</lastBuildDate>
     
 	<atom:link href="https://laoshancai.github.io/tags/hidden/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Syntax Highlighting</title>
+      <link>https://laoshancai.github.io/post/syntax-highlighting/</link>
+      <pubDate>Thu, 30 Aug 2018 16:01:23 +0800</pubDate>
+      
+      <guid>https://laoshancai.github.io/post/syntax-highlighting/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;function helloWorld () {
+  alert(&amp;quot;Hello, World!&amp;quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;x -&amp;gt; 5
+y -&amp;gt; 6
+print(x, digits = NULL, quote = TRUE,
+      na.print = NULL, print.gap = NULL, right = FALSE,
+      max = NULL, useSource = TRUE, ...)
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
     
     <item>
       <title>[English] Creating a New Theme</title>
@@ -36,25 +55,6 @@
       
       <guid>https://laoshancai.github.io/post/even-preview/</guid>
       <description>Based on MarkdownPreview test.md. Markdown # H1 ## H2 ### H3 #### H4 ##### H5 ###### H6 ### Duplicate Header ### Duplicate Header H1 H2 H3 H4 H5 H6 Duplicate Header Duplicate Header Paragraphs This is a paragraph. I am still part of the paragraph. New paragraph. This is a paragraph. I am still part of the paragraph. New paragraph. Anchor Define anchor by {#section-id} Something Footnote This is a</description>
-    </item>
-    
-    <item>
-      <title>Syntax Highlighting</title>
-      <link>https://laoshancai.github.io/post/syntax-highlighting/</link>
-      <pubDate>Tue, 30 Aug 2011 16:01:23 +0800</pubDate>
-      
-      <guid>https://laoshancai.github.io/post/syntax-highlighting/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;function helloWorld () {
-  alert(&amp;quot;Hello, World!&amp;quot;)
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;x -&amp;gt; 5
-y -&amp;gt; 6
-print(x, digits = NULL, quote = TRUE,
-      na.print = NULL, print.gap = NULL, right = FALSE,
-      max = NULL, useSource = TRUE, ...)
-&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
     <item>
